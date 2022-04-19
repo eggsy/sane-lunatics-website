@@ -27,7 +27,7 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
       <meta name="twitter:description" content={meta.description} />
     </Head>
 
-    <div className="min-h-screen text-white bg-black ">
+    <div className="min-h-screen text-white bg-black font-amatic ">
       <Component {...pageProps} />
     </div>
   </>
