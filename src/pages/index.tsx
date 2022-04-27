@@ -47,7 +47,7 @@ const HomePage: NextPage = () => (
     <ParallaxLayer
       offset={2}
       speed={0.5}
-      className="flex items-center justify-center px-6 bg-white/5 lg:px-0"
+      className="flex items-center justify-center px-6 lg:px-0"
     >
       <div className="w-full lg:w-2/3 space-y-14">
         <Title>Önizleme</Title>
@@ -90,7 +90,7 @@ const HomePage: NextPage = () => (
       offset={4}
       speed={0.5}
       factor={2}
-      className="flex items-center justify-center px-6 bg-white/5 lg:px-0"
+      className="flex items-center justify-center px-6 lg:px-0"
     >
       <div className="w-full mx-auto space-y-14 lg:w-2/3 ">
         <Title>Ekip</Title>
@@ -131,7 +131,7 @@ const HomePage: NextPage = () => (
     <ParallaxLayer
       offset={8}
       speed={0.5}
-      className="flex items-center justify-center px-6 bg-white/5 lg:px-0"
+      className="flex items-center justify-center px-6 lg:px-0"
     >
       <div className="mx-auto space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
