@@ -16,6 +16,7 @@ import createArray from "../functions/createArray";
 
 // Static data
 const PEOPLE_AMOUNT = 20;
+const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 
 const HomePage: NextPage = () => (
   <main className="space-y-36">
@@ -45,8 +46,8 @@ const HomePage: NextPage = () => (
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
           {["/1.jpg", "/2.jpeg", "/3.jpeg", "/4.jpg", "/5.jpeg", "/6.jpg"].map(
-            (item) => (
-              <PreviewCard key={item} image={item} />
+            (item, index) => (
+              <PreviewCard key={`${item}-${index}`} image={item} />
             )
           )}
         </div>
@@ -60,7 +61,7 @@ const HomePage: NextPage = () => (
         <div className="flex items-center text-8xl">
           {"25 Mayıs 2022".split("").map((item, index) => (
             <div
-              key={item}
+              key={`date-${item}-${index}`}
               className="animate-bounce"
               style={{
                 animationDelay: `${index * 100}ms`,
@@ -131,7 +132,7 @@ const HomePage: NextPage = () => (
       <div className="space-y-10 lg:w-2/4">
         <Title>Bağlantılar</Title>
 
-        <div className="flex flex-wrap items-center justify-center space-x-4 font-sans">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <ShareItem
             icon={Phone}
             title="İletişime Geç"
@@ -141,9 +142,9 @@ const HomePage: NextPage = () => (
 
           <ShareItem
             icon={Share}
-            title="Bağlantıyı Kopyala"
+            title="Sayfa Bağlantısını Kopyala"
             action="copyToClipboard"
-            value={window?.location?.href}
+            value={WEBSITE_URL}
           />
 
           <ShareItem
