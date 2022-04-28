@@ -22,7 +22,7 @@ const HomePage: NextPage = () => (
       </h1>
     </Layer>
 
-    <Layer className="flex items-center px-6 lg:justify-center lg:px-0">
+    <Layer>
       <div className="lg:text-right">
         <div className="hidden lg:block">
           <Theater />
@@ -36,7 +36,7 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center px-6 lg:px-0">
+    <Layer>
       <div className="w-full lg:w-2/3 space-y-14">
         <Title>Önizleme</Title>
 
@@ -51,11 +51,22 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center px-6 lg:px-0">
-      <div className="space-y-4 text-center">
-        <div>
-          <span className="text-2xl text-white/50">yer ve zaman</span>
-          <h3 className="animate-pulse text-8xl">25 Mayıs 2022</h3>
+    <Layer>
+      <div className="space-y-6 text-center lg:space-y-10">
+        <span className="text-2xl text-white/50">yer ve zaman</span>
+
+        <div className="flex items-center text-8xl">
+          {"25 Mayıs 2022".split("").map((item, index) => (
+            <div
+              key={item}
+              className="animate-bounce"
+              style={{
+                animationDelay: `${index * 100}ms`,
+              }}
+            >
+              {item}
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col leading-tight">
@@ -70,7 +81,7 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center px-6 lg:px-0">
+    <Layer>
       <div className="w-full mx-auto space-y-14 lg:w-2/3 ">
         <Title>Ekip</Title>
 
@@ -90,7 +101,7 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center px-6 lg:px-0">
+    <Layer>
       <div className="w-full space-y-14 lg:w-2/3">
         <Title>Karakterler</Title>
 
@@ -102,7 +113,7 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center px-6 lg:px-0">
+    <Layer>
       <div className="mx-auto space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
 
@@ -114,7 +125,7 @@ const HomePage: NextPage = () => (
       </div>
     </Layer>
 
-    <Layer className="flex items-center justify-center">
+    <Layer>
       <a
         href="https://eggsy.xyz/?utm_source=sane-lunatics-website"
         rel="noreferrer"
@@ -131,7 +142,6 @@ const HomePage: NextPage = () => (
 const Layer: React.FC<{
   children: React.ReactNode;
   background?: string;
-  className?: string;
 }> = ({ children, background }) => (
   <div
     className={`relative flex items-center justify-center w-full min-h-screen ${
