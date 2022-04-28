@@ -1,5 +1,3 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 // Types
 import type { NextPage } from "next";
 
@@ -17,20 +15,14 @@ import createArray from "../functions/createArray";
 const PEOPLE_AMOUNT = 21;
 
 const HomePage: NextPage = () => (
-  <Parallax pages={10} style={{ top: "0", left: "0" }}>
-    <ParallaxLayer offset={0} speed={2.5}>
-      <div className="bg-[url('/header.jpg')] px-6 lg:px-0 w-full h-full bg-cover bg-center flex items-center justify-center">
-        <h1 className="text-6xl font-black text-center text-white drop-shadow-lg lg:text-8xl lg:w-1/2">
-          Aklı Başında Deliler Kumpanyası
-        </h1>
-      </div>
-    </ParallaxLayer>
+  <main className="space-y-36">
+    <Layer background="/header.jpg">
+      <h1 className="text-6xl font-black text-center text-white drop-shadow-lg lg:text-8xl lg:w-1/2">
+        Aklı Başında Deliler Kumpanyası
+      </h1>
+    </Layer>
 
-    <ParallaxLayer
-      offset={1}
-      speed={0.5}
-      className="flex items-center px-6 lg:justify-center lg:px-0"
-    >
+    <Layer className="flex items-center px-6 lg:justify-center lg:px-0">
       <div className="lg:text-right">
         <div className="hidden lg:block">
           <Theater />
@@ -42,13 +34,9 @@ const HomePage: NextPage = () => (
 
         <span className="mr-6 text-2xl text-white/50">﹣ Birisi</span>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={2}
-      speed={0.5}
-      className="flex items-center justify-center px-6 lg:px-0"
-    >
+    <Layer className="flex items-center justify-center px-6 lg:px-0">
       <div className="w-full lg:w-2/3 space-y-14">
         <Title>Önizleme</Title>
 
@@ -61,13 +49,9 @@ const HomePage: NextPage = () => (
           <PictureCard image="/6.jpg" />
         </div>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={3}
-      speed={0.5}
-      className="flex items-center justify-center px-6 lg:px-0"
-    >
+    <Layer className="flex items-center justify-center px-6 lg:px-0">
       <div className="space-y-4 text-center">
         <div>
           <span className="text-2xl text-white/50">yer ve zaman</span>
@@ -84,14 +68,9 @@ const HomePage: NextPage = () => (
           </span>
         </div>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={4}
-      speed={0.5}
-      factor={2}
-      className="flex items-center justify-center px-6 lg:px-0"
-    >
+    <Layer className="flex items-center justify-center px-6 lg:px-0">
       <div className="w-full mx-auto space-y-14 lg:w-2/3 ">
         <Title>Ekip</Title>
 
@@ -109,14 +88,9 @@ const HomePage: NextPage = () => (
           ))}
         </div>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={5}
-      speed={0.5}
-      factor={4}
-      className="flex items-center justify-center px-6 lg:px-0"
-    >
+    <Layer className="flex items-center justify-center px-6 lg:px-0">
       <div className="w-full space-y-14 lg:w-2/3">
         <Title>Karakterler</Title>
 
@@ -126,13 +100,9 @@ const HomePage: NextPage = () => (
           ))}
         </div>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={8}
-      speed={0.5}
-      className="flex items-center justify-center px-6 lg:px-0"
-    >
+    <Layer className="flex items-center justify-center px-6 lg:px-0">
       <div className="mx-auto space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
 
@@ -142,13 +112,9 @@ const HomePage: NextPage = () => (
           başaracağız bu oyunu. Zamanında çıkartacağız. Hazırlanıyoruz.
         </p>
       </div>
-    </ParallaxLayer>
+    </Layer>
 
-    <ParallaxLayer
-      offset={9}
-      speed={0.5}
-      className="flex items-center justify-center"
-    >
+    <Layer className="flex items-center justify-center">
       <a
         href="https://eggsy.xyz/?utm_source=sane-lunatics-website"
         rel="noreferrer"
@@ -158,8 +124,27 @@ const HomePage: NextPage = () => (
       >
         a website by EGGSY
       </a>
-    </ParallaxLayer>
-  </Parallax>
+    </Layer>
+  </main>
+);
+
+const Layer: React.FC<{
+  children: React.ReactNode;
+  background?: string;
+  className?: string;
+}> = ({ children, background }) => (
+  <div
+    className={`relative flex items-center justify-center w-full min-h-screen ${
+      background ? "bg-cover bg-center" : ""
+    }`}
+    style={{
+      backgroundImage: `url('${background}')`,
+    }}
+  >
+    <div className="flex items-center justify-center w-full h-full px-6 lg:px-0">
+      {children}
+    </div>
+  </div>
 );
 
 export default HomePage;
