@@ -15,7 +15,7 @@ import people from "../data/people";
 import createArray from "../functions/createArray";
 
 // Static data
-const PEOPLE_AMOUNT = 20;
+const PEOPLE_AMOUNT = 21;
 const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 
 const HomePage: NextPage = () => (
