@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 
 // Components
 import { Theater } from "../components/Icons";
-import { PictureCard } from "../components/Card/Picture";
+import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
 
@@ -41,12 +41,11 @@ const HomePage: NextPage = () => (
         <Title>Önizleme</Title>
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
-          <PictureCard image="/1.jpg" />
-          <PictureCard image="/2.jpeg" />
-          <PictureCard image="/3.jpeg" />
-          <PictureCard image="/4.jpg" />
-          <PictureCard image="/5.jpeg" />
-          <PictureCard image="/6.jpg" />
+          {["/1.jpg", "/2.jpeg", "/3.jpeg", "/4.jpg", "/5.jpeg", "/6.jpg"].map(
+            (item) => (
+              <PreviewCard key={item} image={item} />
+            )
+          )}
         </div>
       </div>
     </Layer>
