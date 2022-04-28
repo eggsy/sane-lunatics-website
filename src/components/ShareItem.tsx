@@ -8,15 +8,19 @@ export const ShareItem: React.FC<{
     window.open(url).focus();
   };
 
-  const copyToClipBoard = (text: string) => {
-    navigator?.clipboard?.writeText(text);
+  const copyToClipBoard = async (text: string) => {
+    if (!navigator?.clipboard) return;
+
+    navigator?.clipboard
+      ?.writeText(text)
+      ?.then(() => alert("Koyalandı!"))
+      ?.catch(console.error);
   };
 
   const handleClick = () => {
     switch (action) {
       case "copyToClipboard":
         copyToClipBoard(value);
-        alert("Kopyalandı!");
         break;
       case "openOnWeb":
         openOnWeb(value);
@@ -36,16 +40,14 @@ export const ShareItem: React.FC<{
   return (
     <button
       type="button"
-      className="flex flex-col items-center space-y-4 font-sans"
+      className="flex items-center justify-center w-4/5 p-4 space-x-2 font-sans transition-colors rounded-full cursor-pointer hover:bg-white/20 group text-white/50 hover:text-white bg-white/10 lg:w-max"
       onClick={handleClick}
     >
-      <div className="flex items-center p-4 space-x-2 transition-colors rounded-full cursor-pointer hover:bg-white/20 group text-white/50 hover:text-white bg-white/10 w-max">
-        <Icon />
+      <Icon />
 
-        <span className="font-light transition-opacity opacity-50 group-hover:opacity-100">
-          {title}
-        </span>
-      </div>
+      <span className="font-light transition-opacity opacity-50 group-hover:opacity-100">
+        {title}
+      </span>
     </button>
   );
 };
