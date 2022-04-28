@@ -17,7 +17,7 @@ const PEOPLE_AMOUNT = 20;
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer background="/header.jpg">
-      <h1 className="text-6xl font-black text-center text-white drop-shadow-lg lg:text-8xl lg:w-1/2">
+      <h1 className="text-6xl font-black text-center text-white drop-shadow-xl lg:text-8xl lg:w-1/2">
         Aklı Başında Deliler Kumpanyası
       </h1>
     </Layer>
