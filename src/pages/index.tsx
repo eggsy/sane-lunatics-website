@@ -2,14 +2,14 @@
 import type { NextPage } from "next";
 
 // Components
-import { Location, Phone, Share, Theater } from "../components/Icons";
+import { Location, Mail, Share, Theater } from "../components/Icons";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
 import { ShareItem } from "../components/ShareItem";
 
 // Data
-import people from "../data/people";
+import people, { management } from "../data/people";
 
 // Functions
 import createArray from "../functions/createArray";
@@ -21,35 +21,35 @@ const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer background="/header.jpg">
-      <h1 className="text-6xl font-black text-center text-white drop-shadow-xl lg:text-8xl lg:w-1/2">
-        Aklı Başında Deliler Kumpanyası
-      </h1>
-    </Layer>
-
-    <Layer>
-      <div className="lg:text-right">
-        <div className="hidden lg:block">
-          <Theater />
+      <div className="text-5xl font-black text-white lg:w-2/3 lg:text-6xl">
+        <div className="absolute inset-x-0 top-0 px-4 py-4 text-center bg-black">
+          Aklı Başında Deliler Kumpanyası
         </div>
-
-        <p className="text-6xl font-bold text-left text-white lg:text-center">
-          {'"'}Ne yaparsan yap, önce provasını yap!{'"'}
-        </p>
-
-        <span className="mr-6 text-2xl text-white/50">﹣ Birisi</span>
       </div>
     </Layer>
 
     <Layer>
-      <div className="lg:w-2/3 space-y-14">
-        <Title>Önizleme</Title>
+      <div className="text-center">
+        <div className="hidden lg:block">
+          <Theater />
+        </div>
+
+        <p className="text-6xl font-bold text-white">
+          {'"'}Ne yaparsan yap, önce provasını yap!{'"'}
+        </p>
+
+        <span className="mr-6 text-2xl text-white/50">﹣ Kumpanya Ekibi</span>
+      </div>
+    </Layer>
+
+    <Layer>
+      <div className="w-full lg:w-2/3 space-y-14">
+        <Title>Kumpanyadan Kareler</Title>
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
-          {["/1.jpg", "/2.jpeg", "/3.jpeg", "/4.jpg", "/5.jpeg", "/6.jpg"].map(
-            (item, index) => (
-              <PreviewCard key={`${item}-${index}`} image={item} />
-            )
-          )}
+          {createArray(6).map((_, index) => (
+            <PreviewCard key={`preview-${index}`} image={`/${index + 1}.jpg`} />
+          ))}
         </div>
       </div>
     </Layer>
@@ -74,23 +74,23 @@ const HomePage: NextPage = () => (
 
         <div className="flex flex-col leading-tight">
           <span className="text-3xl leading-tight opacity-75 lg:text-2xl">
-            1071 Kongre Merkezi
+            1071 Malazgirt Kongre ve Kültür Merkezi
           </span>
 
           <span className="text-xl leading-tight lg:text-base text-white/50">
-            Muş Alparslan Üniversitesi
+            Muş Alparslan Üniversitesi − Ana Salon
           </span>
         </div>
       </div>
     </Layer>
 
     <Layer>
-      <div className="space-y-14 lg:w-2/3">
+      <div className=" space-y-14 lg:w-1/3">
         <Title>Ekip</Title>
 
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="space-y-8">
           {people.map((category, index) => (
-            <div key={`category-${index}`} className="space-y-2 ">
+            <div key={`category-${index}`} className="space-y-2">
               <h3 className="text-3xl border-b w-max text-white/80 border-white/20">
                 {category.title}
               </h3>
@@ -105,14 +105,40 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="space-y-14 lg:w-2/3">
-        <Title>Karakterler</Title>
+      <div className="w-full space-y-20 lg:w-2/3">
+        <Title>Kadromuz</Title>
 
-        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
-          {createArray(PEOPLE_AMOUNT).map((_, index) => (
-            <PeopleCard key={`people-${index}`} image={`/${index + 1}.jpg`} />
-          ))}
+        <div className="space-y-4">
+          <h3 className="text-4xl border-b border-white/10 ">Yönetim</h3>
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+            {management.map((person, index) => (
+              <PeopleCard key={`manegement-${index}`} {...person} />
+            ))}
+          </div>
         </div>
+
+        <div className="space-y-4">
+          <h3 className="text-4xl border-b border-white/10">Oyuncular</h3>
+
+          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+            {createArray(PEOPLE_AMOUNT).map((_, index) => (
+              <PeopleCard key={`people-${index}`} image={`/${index + 1}.jpg`} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </Layer>
+
+    <Layer>
+      <div className="space-y-10 lg:w-2/4">
+        <Title>Oyunun Konusu</Title>
+
+        <p className="text-2xl text-center text-white/50">
+          Aklı Başında Deliler... Aklı... Başında... Deliler... Aklı Başında...
+          Deliler! Aklı! Başında! DELİLER!! AKLI BAŞINDA DELİLER! Deli- deli...
+          Aklı başında...
+        </p>
       </div>
     </Layer>
 
@@ -134,10 +160,17 @@ const HomePage: NextPage = () => (
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <ShareItem
-            icon={Phone}
-            title="İletişime Geç"
+            icon={Mail}
+            title="Dr. Erdinç Öcal ﹣ E-Posta"
             action="openMail"
             value="e.ocal@alparslan.edu.tr"
+          />
+
+          <ShareItem
+            icon={Mail}
+            title="Doç. Dr. Ayça Kartal ﹣ E-Posta"
+            action="openMail"
+            value="a.kartal@alparslan.edu.tr"
           />
 
           <ShareItem
