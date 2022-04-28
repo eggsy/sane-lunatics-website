@@ -8,6 +8,7 @@ const meta = {
   title: "Aklı Başında Deliler ﹣ 25 Mayıs'ta Sahnede!",
   description:
     "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
+  image: "/header.jpg",
 };
 
 const SaneLunaticsWebsite = ({ Component, pageProps }) => (
@@ -18,13 +19,21 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
       <meta name="theme-color" content="#000000" />
       <link rel="icon" href="/favicon.png" />
 
+      <meta name="author" content="Abdulbaki 'EGGSY' Dursun" />
+      <meta
+        name="keywords"
+        content="Tiyatro, Muş, Aklı Başında Deliler, Komedi, Eğlence, Şov"
+      />
+
       {/* Open-Graph */}
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
 
       {/* Twitter */}
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={meta.image} />
     </Head>
 
     <div className="min-h-screen text-white bg-black font-amatic ">
