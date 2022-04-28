@@ -2,13 +2,16 @@
 import type { NextPage } from "next";
 
 // Components
-import { Theater } from "../components/Icons";
+import { Location, Phone, Share, Theater } from "../components/Icons";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
+import { ShareItem } from "../components/ShareItem";
 
 // Data
 import people from "../data/people";
+
+// Functions
 import createArray from "../functions/createArray";
 
 // Static data
@@ -37,7 +40,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="w-full lg:w-2/3 space-y-14">
+      <div className="lg:w-2/3 space-y-14">
         <Title>Önizleme</Title>
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
@@ -81,7 +84,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="w-full mx-auto space-y-14 lg:w-2/3 ">
+      <div className="space-y-14 lg:w-2/3">
         <Title>Ekip</Title>
 
         <div className="grid gap-10 lg:grid-cols-2">
@@ -101,7 +104,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="w-full space-y-14 lg:w-2/3">
+      <div className="space-y-14 lg:w-2/3">
         <Title>Karakterler</Title>
 
         <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
@@ -113,7 +116,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="mx-auto space-y-10 lg:w-2/4">
+      <div className="space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
 
         <p className="text-2xl text-center text-white/50">
@@ -121,6 +124,35 @@ const HomePage: NextPage = () => (
           bir şey olacak. Çok komik olacak. Güleceğiz. Canım öğrencilerimle
           başaracağız bu oyunu. Zamanında çıkartacağız. Hazırlanıyoruz.
         </p>
+      </div>
+    </Layer>
+
+    <Layer>
+      <div className="space-y-10 lg:w-2/4">
+        <Title>Bağlantılar</Title>
+
+        <div className="flex flex-wrap items-center justify-center space-x-4 font-sans">
+          <ShareItem
+            icon={Phone}
+            title="İletişime Geç"
+            action="openMail"
+            value="e.ocal@alparslan.edu.tr"
+          />
+
+          <ShareItem
+            icon={Share}
+            title="Bağlantıyı Kopyala"
+            action="copyToClipboard"
+            value={window?.location?.href}
+          />
+
+          <ShareItem
+            icon={Location}
+            title="Konumu Haritada Göster"
+            action="openOnWeb"
+            value="https://goo.gl/maps/vTVkqNH2T2KBAHuk9"
+          />
+        </div>
       </div>
     </Layer>
 
