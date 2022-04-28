@@ -7,7 +7,7 @@ import "../styles/tailwind.css";
 const meta = {
   title: "Aklı Başında Deliler ﹣ 25 Mayıs'ta Sahnede!",
   description:
-    "Erdinç Öcal'ın yönetmenliğini üstlendiği 'Aklı Başında Deliler', 25 Mayıs'ta Muş Alparslan Üniversitesi 2071 Kongre Merkezi'nde sahne alacak! Yerinizi alın!",
+    "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
 };
 
 const SaneLunaticsWebsite = ({ Component, pageProps }) => (
