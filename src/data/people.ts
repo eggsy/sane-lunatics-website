@@ -5,7 +5,7 @@ interface IPeople {
 
 const people: IPeople[] = [
   {
-    title: "Yönetmen",
+    title: "Yazan & Yöneten",
     people: ["Dr. Öğr. Üyesi Erdinç Öcal"],
   },
   {
@@ -27,14 +27,14 @@ const people: IPeople[] = [
   {
     title: "Oyuncular",
     people: [
-      "Dr. Öğr. Üyesi Erdinç Öcal",
+      "Dr. Erdinç Öcal",
       "Doç. Dr. Ayça Kartal",
-      "Dr. Öğr. Üyesi Fatih Türkan",
-      "Dr. Öğr. Üyesi Yusuf Öztürk",
+      "Dr. Fatih Türkan",
+      "Dr. Yusuf Öztürk",
       "Arş. Gör. Gülşah Kuru",
       "Azra Demircan",
       "Eda Çiçek",
-      "Mehmet Rıza Baba",
+      "Mehmet Rıfkı Baba",
       "Adem Kaplan",
       "Dilan Çelik",
       "Ercan Ateş",
@@ -49,6 +49,50 @@ const people: IPeople[] = [
       "Ünzile Günöz",
       "Yeter Yanalak",
     ],
+  },
+];
+
+interface IManegement {
+  name: string;
+  role: string;
+  image: string;
+}
+
+export const management: IManegement[] = [
+  {
+    name: "Erdinç Öcal",
+    role: "Yazan & Yöneten",
+    image: "/erdinc.jpeg",
+  },
+  {
+    name: "Ayça Kartal",
+    role: "Reji Asistanı",
+    image: "/ayca.jpeg",
+  },
+  {
+    name: "Mehmet Rıfkı Baba",
+    role: "Sahne Amiri",
+    image: "/11.jpg",
+  },
+  {
+    name: "Adem Kaplan",
+    role: "Sahne Amiri",
+    image: "/8.jpg",
+  },
+  {
+    name: "Zeyneb Türkoğlu",
+    role: "Müzik Yönetmeni",
+    image: "/zeyneb.jpeg",
+  },
+  {
+    name: "Batuhan Karadaş",
+    role: "Işık, Ses & Teknik",
+    image: "/batu.jpg",
+  },
+  {
+    name: "Abdulbaki Dursun",
+    role: "Işık, Ses & Teknik",
+    image: "/baki.jpg",
   },
 ];
 
