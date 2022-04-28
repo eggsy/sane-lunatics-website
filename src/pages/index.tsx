@@ -8,7 +8,7 @@ import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
 
 // Data
-import categories from "../data/categories";
+import people from "../data/people";
 import createArray from "../functions/createArray";
 
 // Static data
@@ -75,7 +75,7 @@ const HomePage: NextPage = () => (
         <Title>Ekip</Title>
 
         <div className="grid gap-10 lg:grid-cols-2">
-          {categories.map((category, index) => (
+          {people.map((category, index) => (
             <div key={`category-${index}`} className="space-y-2 ">
               <h3 className="text-3xl border-b w-max text-white/80 border-white/20">
                 {category.title}

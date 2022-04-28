@@ -1,9 +1,9 @@
-interface ICategories {
+interface IPeople {
   title: string;
   people: string[];
 }
 
-const categories: ICategories[] = [
+const people: IPeople[] = [
   {
     title: "Yönetmen",
     people: ["Dr. Öğr. Üyesi Erdinç Öcal"],
@@ -31,7 +31,7 @@ const categories: ICategories[] = [
       "Doç. Dr. Ayça Kartal",
       "Dr. Öğr. Üyesi Fatih Türkan",
       "Dr. Öğr. Üyesi Yusuf Öztürk",
-      "Gülşah Kuru",
+      "Arş. Gör. Gülşah Kuru",
       "Azra Demircan",
       "Eda Çiçek",
       "Mehmet Rıza Baba",
@@ -52,4 +52,4 @@ const categories: ICategories[] = [
   },
 ];
 
-export default categories;
+export default people;
