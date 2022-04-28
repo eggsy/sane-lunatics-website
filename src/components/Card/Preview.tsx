@@ -1,4 +1,4 @@
-export const PictureCard: React.FC<{
+export const PreviewCard: React.FC<{
   image: string;
 }> = ({ image }) => (
   <div
@@ -6,4 +6,4 @@ export const PictureCard: React.FC<{
     style={{ backgroundImage: `url('/previews/${image}')` }}
   />
 );
-export default PictureCard;
+export default PreviewCard;
