@@ -1,6 +1,12 @@
 {
   "name": "sane-lunatics-website",
-  "version": "0.1.0",
+  "description": "🎭 Website source-code for our school play.",
+  "author": {
+    "name": "Abdulbaki 'EGGSY' Dursun",
+    "email": "eggsydev@gmail.com",
+    "url": "https://eggsy.xyz"
+  },
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +15,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/parallax": "^9.4.4",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"
