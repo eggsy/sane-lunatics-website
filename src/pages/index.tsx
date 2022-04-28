@@ -2,7 +2,7 @@
 import type { NextPage } from "next";
 
 // Components
-import { Location, Mail, Share, Theater } from "../components/Icons";
+import { Instagram, Location, Mail, Share, Theater } from "../components/Icons";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
@@ -165,7 +165,21 @@ const HomePage: NextPage = () => (
       <div className="space-y-10 lg:w-2/4">
         <Title>Bağlantılar</Title>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <ShareItem
+            icon={Instagram}
+            title="Instagram Sayfamız"
+            action="openOnWeb"
+            value="https://instagram.com/aklibasindadeliler"
+          />
+
+          <ShareItem
+            icon={Share}
+            title="Sayfa Bağlantısını Kopyala"
+            action="copyToClipboard"
+            value={WEBSITE_URL}
+          />
+
           <ShareItem
             icon={Mail}
             title="Dr. Erdinç Öcal ﹣ E-Posta"
@@ -178,13 +192,6 @@ const HomePage: NextPage = () => (
             title="Doç. Dr. Ayça Kartal ﹣ E-Posta"
             action="openMail"
             value="a.kartal@alparslan.edu.tr"
-          />
-
-          <ShareItem
-            icon={Share}
-            title="Sayfa Bağlantısını Kopyala"
-            action="copyToClipboard"
-            value={WEBSITE_URL}
           />
 
           <ShareItem
