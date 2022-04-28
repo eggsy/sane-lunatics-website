@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+html {
+  @apply bg-black;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #212121;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  scrollbar-width: thin;
+  background-color: #ffffff10;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  padding: 1px;
+  background-color: #ffffff25;
+}
