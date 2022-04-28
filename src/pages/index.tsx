@@ -29,7 +29,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="text-center">
+      <div className="text-center lg:text-right">
         <div className="hidden lg:block">
           <Theater />
         </div>
