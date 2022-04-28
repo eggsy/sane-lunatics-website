@@ -24,7 +24,7 @@ export const ShareItem: React.FC<{
       case "openMail":
         openOnWeb(
           `mailto:${value}?subject=${encodeURIComponent(
-            "Aklı Başında Deliler Hakkında"
+            "Aklı Başında Deliler Kumpanyası Hakkında"
           )}`
         );
         break;
