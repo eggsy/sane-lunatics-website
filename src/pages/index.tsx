@@ -21,10 +21,17 @@ const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer background="/header.jpg">
-      <div className="text-5xl font-black text-white lg:w-2/3 lg:text-6xl">
-        <div className="absolute inset-x-0 top-0 px-4 py-4 text-center bg-black">
-          Aklı Başında Deliler Kumpanyası
+      <div className="font-black text-white">
+        <div className="absolute inset-x-0 top-0 px-4 py-2 text-center bg-black/50">
+          <h3 className="text-4xl lg:text-6xl">
+            Aklı Başında Deliler Kumpanyası
+          </h3>
         </div>
+      </div>
+
+      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl text-white inset-x-6 lg:w-1/2 bottom-4">
+        <span className="border-b border-white/25">2 Perde</span>
+        <span className="border-b border-white/25">Bir Komedi Oyunu</span>
       </div>
     </Layer>
 
