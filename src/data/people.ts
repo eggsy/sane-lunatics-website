@@ -62,22 +62,22 @@ export const management: IManegement[] = [
   {
     name: "Erdinç Öcal",
     role: "Yazan & Yöneten",
-    image: "/erdinc.jpeg",
+    image: "/erdinc.jpg",
   },
   {
     name: "Ayça Kartal",
     role: "Reji Asistanı",
-    image: "/ayca.jpeg",
+    image: "/ayca.jpg",
   },
   {
     name: "Mehmet Rıfkı Baba",
     role: "Sahne Amiri",
-    image: "/11.jpg",
+    image: "/mehmet.jpg",
   },
   {
     name: "Adem Kaplan",
     role: "Sahne Amiri",
-    image: "/8.jpg",
+    image: "/adem.jpg",
   },
   {
     name: "Zeyneb Türkoğlu",
@@ -87,7 +87,7 @@ export const management: IManegement[] = [
   {
     name: "Batuhan Karadaş",
     role: "Işık, Ses & Teknik",
-    image: "/batu.jpg",
+    image: "/batu.jpeg",
   },
   {
     name: "Abdulbaki Dursun",
