@@ -22,7 +22,7 @@ export const PeopleCard: React.FC<{
         {PersonImage}
 
         <div className="flex flex-col items-center flex-shrink-0">
-          <span className="text-xl opacity-75">{name}</span>
+          <span className="text-2xl opacity-75">{name}</span>
           <span className="opacity-50">{role}</span>
         </div>
       </div>
