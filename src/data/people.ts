@@ -14,11 +14,11 @@ const people: IPeople[] = [
   },
   {
     title: "Sahne Amiri",
-    people: ["Mehmet Rıza Baba", "Adem Kaplan"],
+    people: ["Mehmet Rıfkı Baba", "Adem Kaplan"],
   },
   {
     title: "Müzik Yönetmeni",
-    people: ["Öğr. Gör. Zeynep Türkoğlu"],
+    people: ["Öğr. Gör. Zeyneb Türkoğlu"],
   },
   {
     title: "Işık ve Ses",
