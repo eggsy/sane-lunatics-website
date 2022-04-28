@@ -29,7 +29,7 @@ const HomePage: NextPage = () => (
         </div>
       </div>
 
-      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl text-white inset-x-6 lg:w-1/2 bottom-4">
+      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl text-white inset-x-6 lg:w-1/2 bottom-8">
         <span className="border-b border-white/25">2 Perde</span>
         <span className="border-b border-white/25">Bir Komedi Oyunu</span>
       </div>
