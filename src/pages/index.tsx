@@ -12,7 +12,7 @@ import people from "../data/people";
 import createArray from "../functions/createArray";
 
 // Static data
-const PEOPLE_AMOUNT = 21;
+const PEOPLE_AMOUNT = 20;
 
 const HomePage: NextPage = () => (
   <main className="space-y-36">
@@ -82,7 +82,7 @@ const HomePage: NextPage = () => (
               </h3>
 
               <div className="text-2xl text-white/50">
-                {category.people.join(", ")}
+                {category.people.join("－")}
               </div>
             </div>
           ))}
