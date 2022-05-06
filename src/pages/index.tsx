@@ -27,12 +27,10 @@ const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer background="/header.jpg">
-      <div className="font-black text-white">
-        <div className="absolute inset-x-0 top-0 px-4 py-2 text-center bg-black/50">
-          <h3 className="text-4xl lg:text-6xl">
-            Aklı Başında Deliler Kumpanyası
-          </h3>
-        </div>
+      <div className="absolute inset-x-0 top-0 px-4 py-2 text-center bg-black/90">
+        <h3 className="text-4xl font-black text-white lg:text-6xl">
+          Aklı Başında Deliler Kumpanyası
+        </h3>
       </div>
 
       <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl text-white inset-x-6 lg:w-1/2 bottom-8">
@@ -158,7 +156,7 @@ const HomePage: NextPage = () => (
           öğrencilerin hocalarıyla yaşadıkları komik durumlar ele alınır. İkinci
           perdenin <U>ilk epizodunda absürt tiyatro</U> örneklerinden bir bölüm
           seyirciye sunulur. Bir ameliyathanede, evlilik yıldönümünü unutan
-          doktor, hemşire eşi, anestezi uzmanı ve ameliyathaneyi basan doktorun
+          doktor; hemşire eşi, anestezi uzmanı ve ameliyathaneyi basan doktorun
           annesi ile bakalım <U>hastanın ameliyatını gerçekleştirebilecek mi</U>
           ? Final epizodunda kendi rengimiz, özümüz ve özlemimiz Geleneksel Türk
           Tiyatrosu{"'"}nun karakterleri <U>Kavuklu ve Pişekar{"'"}</U>
@@ -244,7 +242,7 @@ const HomePage: NextPage = () => (
 
           <ShareItem
             icon={Mail}
-            title="Reji Asst. E-Posta"
+            title="Reji Assistanı E-Posta"
             action="openMail"
             value="a.kartal@alparslan.edu.tr"
           />
