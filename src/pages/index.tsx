@@ -27,13 +27,13 @@ const WEBSITE_URL = "https://sane-lunatics.netlify.app";
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer background="/header.jpg">
-      <div className="absolute inset-x-0 top-0 px-4 py-2 text-center bg-black/90">
-        <h3 className="text-4xl font-black text-white lg:text-6xl">
+      <div className="absolute inset-x-0 top-0 px-4 py-2 text-center text-yellow-500 bg-black/90">
+        <h3 className="text-4xl font-black lg:text-6xl">
           Aklı Başında Deliler Kumpanyası
         </h3>
       </div>
 
-      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl text-white inset-x-6 lg:w-1/2 bottom-8">
+      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl font-bold text-yellow-500 inset-x-6 lg:w-1/2 bottom-8">
         <span className="border-b border-white/25">2 Perde</span>
         <span className="border-b border-white/25">Bir Komedi Oyunu</span>
       </div>
@@ -45,11 +45,11 @@ const HomePage: NextPage = () => (
           <Theater />
         </div>
 
-        <p className="text-6xl font-bold text-white">
+        <p className="text-6xl font-bold text-yellow-500">
           {'"'}Ne yaparsan yap, önce provasını yap!{'"'}
         </p>
 
-        <span className="mr-6 text-2xl text-white/50">﹣ Kumpanya Ekibi</span>
+        <span className="mr-6 text-2xl">﹣ Kumpanya Ekibi</span>
       </div>
     </Layer>
 
@@ -67,7 +67,7 @@ const HomePage: NextPage = () => (
 
     <Layer>
       <div className="space-y-6 text-center lg:space-y-10">
-        <span className="text-2xl font-bold">yer ve zaman</span>
+        <span className="text-2xl font-bold text-yellow-500">yer ve zaman</span>
 
         <div className="flex items-center text-8xl">
           {"25 Mayıs 2022".split("").map((item, index) => (
@@ -102,7 +102,7 @@ const HomePage: NextPage = () => (
         <div className="space-y-8">
           {people.map((category, index) => (
             <div key={`category-${index}`} className="space-y-2">
-              <h3 className="text-3xl font-semibold border-b w-max border-white/20">
+              <h3 className="text-3xl font-semibold text-yellow-500 border-b w-max border-white/20">
                 {category.title}
               </h3>
 
@@ -118,7 +118,9 @@ const HomePage: NextPage = () => (
         <Title>Kadromuz</Title>
 
         <div className="space-y-4">
-          <h3 className="text-4xl border-b border-white/10 ">Yönetim</h3>
+          <h3 className="text-4xl font-bold text-yellow-500 border-b border-white/10">
+            Yönetim
+          </h3>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
             {management.map((person, index) => (
@@ -128,7 +130,9 @@ const HomePage: NextPage = () => (
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-4xl border-b border-white/10">Oyuncular</h3>
+          <h3 className="text-4xl font-bold text-yellow-500 border-b border-white/10">
+            Oyuncular
+          </h3>
 
           <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
             {createArray(PEOPLE_AMOUNT).map((_, index) => (
