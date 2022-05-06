@@ -67,7 +67,7 @@ const HomePage: NextPage = () => (
 
     <Layer>
       <div className="space-y-6 text-center lg:space-y-10">
-        <span className="text-2xl text-white/50">yer ve zaman</span>
+        <span className="text-2xl font-bold">yer ve zaman</span>
 
         <div className="flex items-center text-8xl">
           {"25 Mayıs 2022".split("").map((item, index) => (
@@ -83,12 +83,12 @@ const HomePage: NextPage = () => (
           ))}
         </div>
 
-        <div className="flex flex-col leading-tight">
-          <span className="text-3xl leading-tight opacity-75 lg:text-2xl">
+        <div className="flex flex-col font-bold leading-tight">
+          <span className="text-3xl leading-tight lg:text-2xl">
             1071 Malazgirt Kongre ve Kültür Merkezi
           </span>
 
-          <span className="text-xl leading-tight lg:text-base text-white/50">
+          <span className="text-xl leading-tight lg:text-base">
             Muş Alparslan Üniversitesi − Ana Salon
           </span>
         </div>
@@ -102,13 +102,11 @@ const HomePage: NextPage = () => (
         <div className="space-y-8">
           {people.map((category, index) => (
             <div key={`category-${index}`} className="space-y-2">
-              <h3 className="text-3xl border-b w-max text-white/80 border-white/20">
+              <h3 className="text-3xl font-semibold border-b w-max border-white/20">
                 {category.title}
               </h3>
 
-              <div className="text-2xl text-white/50">
-                {category.people.join("－")}
-              </div>
+              <div className="text-2xl">{category.people.join("－")}</div>
             </div>
           ))}
         </div>
@@ -122,7 +120,7 @@ const HomePage: NextPage = () => (
         <div className="space-y-4">
           <h3 className="text-4xl border-b border-white/10 ">Yönetim</h3>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
             {management.map((person, index) => (
               <PeopleCard key={`management-${index}`} {...person} />
             ))}
@@ -132,7 +130,7 @@ const HomePage: NextPage = () => (
         <div className="space-y-4">
           <h3 className="text-4xl border-b border-white/10">Oyuncular</h3>
 
-          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
             {createArray(PEOPLE_AMOUNT).map((_, index) => (
               <PeopleCard key={`people-${index}`} image={`/${index + 1}.jpg`} />
             ))}
@@ -145,7 +143,7 @@ const HomePage: NextPage = () => (
       <div className="space-y-10 lg:w-2/4">
         <Title>Oyunun Konusu</Title>
 
-        <p className="text-2xl text-center text-white/50">
+        <p className="text-2xl font-semibold text-justify">
           Oyuncular “Aklı Başında Deliler Kumpanyası” oyununu sahnelemek ve
           <U>konuyla ilgili bilgi toplamak için</U> ruh ve sinir hastalıkları
           hastanesini ziyaret ederler. Amaçları başhekimi, ekibini ve hastaları
@@ -171,7 +169,7 @@ const HomePage: NextPage = () => (
       <div className="space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
 
-        <div className="space-y-6 text-2xl text-center text-white/50">
+        <div className="space-y-6 text-2xl font-semibold text-justify">
           <p>
             Pandemi süreciyle çok uzak kaldık sanattan ve sanatçıdan...{" "}
             <U>Bir ışık yakmalıydık</U> tekrar sanata dair öğrencilerimizin ve
@@ -209,6 +207,12 @@ const HomePage: NextPage = () => (
             provalara koşa koşa gelen fedakâr, sahne aşığı oyuncularımıza sonsuz
             teşekkürlerimi sunuyorum... <U>İyi ki varsınız...</U>{" "}
             <U>İyi ki hep beraberiz...</U> 🎉
+          </p>
+
+          <p>
+            Ve <U>işte başlıyor</U> Aklı Başında Deliler Kumpanyası...Işığınız
+            ve alkışınız bol olsun, perdeleriniz hiç kapanmasın.....{" "}
+            <U>Sanatla kalın!</U>
           </p>
         </div>
       </div>
@@ -262,10 +266,11 @@ const HomePage: NextPage = () => (
         href="https://eggsy.xyz/?utm_source=sane-lunatics-website"
         rel="noreferrer"
         target="_blank"
-        className="text-4xl transition-colors border-b border-dashed hover:border-white border-white/50 text-white/50 hover:text-white"
+        className="flex flex-col text-4xl text-center transition-colors border-b border-dashed hover:border-white border-white/50 text-white/50 hover:text-white"
         lang="en"
       >
-        a website by EGGSY
+        <span>a website by:</span>
+        <span>Abdulbaki {"'EGGSY'"} Dursun</span>
       </a>
     </Layer>
   </main>

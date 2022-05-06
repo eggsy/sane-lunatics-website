@@ -21,9 +21,9 @@ export const PeopleCard: React.FC<{
       <div className="flex flex-col w-full space-y-2">
         {PersonImage}
 
-        <div className="flex flex-col items-center flex-shrink-0">
-          <span className="text-2xl opacity-75">{name}</span>
-          <span className="opacity-50">{role}</span>
+        <div className="flex flex-col items-center flex-shrink-0 text-center">
+          <span className="text-2xl font-semibold opacity-75">{name}</span>
+          <span className="text-xl text-white/50">{role}</span>
         </div>
       </div>
     );
