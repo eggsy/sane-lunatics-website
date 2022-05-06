@@ -2,7 +2,13 @@
 import type { NextPage } from "next";
 
 // Components
-import { Instagram, Location, Mail, Share, Theater } from "../components/Icons";
+import {
+  /* Instagram, */
+  Location,
+  Mail,
+  Share,
+  Theater,
+} from "../components/Icons";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { Title } from "../components/Title";
@@ -143,22 +149,22 @@ const HomePage: NextPage = () => (
 
         <p className="text-2xl text-center text-white/50">
           Oyuncular “Aklı Başında Deliler Kumpanyası” oyununu sahnelemek ve
-          konuyla ilgili bilgi toplamak için ruh ve sinir hastalıkları
+          <U>konuyla ilgili bilgi toplamak için</U> ruh ve sinir hastalıkları
           hastanesini ziyaret ederler. Amaçları başhekimi, ekibini ve hastaları
           gözlemlemektir, fakat gittiklerinde başhekim ve ekibi yerlerinde
           yoktur. Bunun üzerine oyuncular başhekimi, ekibini ve hastalarını
-          hayal ederler ve maceralarını sahneye taşırlar. Bir sonraki bölümde
-          yine oyuncuların hayallerindeki üniversite yıllarında, öğrencilerin
-          hocalarıyla yaşadıkları komik durumlar ele alınır. 2. perdenin ilk
-          epizodunda absürt tiyatro örneklerinden bir bölüm seyirciye sunulur.
-          Bir ameliyathanede, evlilik yıldönümünü unutan doktor, hemşire eşi,
-          anestezi uzmanı ve ameliyathaneyi basan doktorun annesi, bakalım
-          hastanın ameliyatını gerçekleştirebilecek mi? Final epizodunda kendi
-          rengimiz, özümüz ve özlemimiz Geleneksel Türk Tiyatrosu{"'"}nun
-          karakterleri Kavuklu ve Pişekar{"'"}ın maceralarını izleriz. Tuzsuz
-          Deli Bekir, Memiş, Dadı ve Psiko{"'"}da onlara eşlik eder. İki perde
-          komedi oyun, her sahnesiyle delice bir delileme vurgusuyla izleyenleri
-          kahkahaya davet ediyor.
+          hayal ederler ve <U>maceralarını sahneye taşırlar</U>. Bir sonraki
+          bölümde yine oyuncuların hayallerindeki üniversite yıllarında,
+          öğrencilerin hocalarıyla yaşadıkları komik durumlar ele alınır. İkinci
+          perdenin <U>ilk epizodunda absürt tiyatro</U> örneklerinden bir bölüm
+          seyirciye sunulur. Bir ameliyathanede, evlilik yıldönümünü unutan
+          doktor, hemşire eşi, anestezi uzmanı ve ameliyathaneyi basan doktorun
+          annesi ile bakalım <U>hastanın ameliyatını gerçekleştirebilecek mi</U>
+          ? Final epizodunda kendi rengimiz, özümüz ve özlemimiz Geleneksel Türk
+          Tiyatrosu{"'"}nun karakterleri <U>Kavuklu ve Pişekar{"'"}</U>
+          ın maceralarını izleriz. Tuzsuz Deli Bekir, Memiş, Dadı ve Psiko{"'"}
+          da onlara eşlik eder. İki perde komedi oyun, her sahnesiyle delice bir
+          delileme vurgusuyla izleyenleri <U>kahkahaya davet ediyor</U>.
         </p>
       </div>
     </Layer>
@@ -169,27 +175,28 @@ const HomePage: NextPage = () => (
 
         <div className="space-y-6 text-2xl text-center text-white/50">
           <p>
-            Pandemi süreciyle çok uzak kaldık sanattan ve sanatçıdan... Bir ışık
-            yakmalıydık tekrar sanata dair öğrencilerimizin ve bizlerin
-            yüreklerinde. Fakat nasıl? Ekip yok, alt yapı yok, dekor, kostüm,
-            aksesuar yok, her şeyden önce çalışmak için yeterli süre yok!...
-            Elimizde sadece tecrübeler... Birden her şeyi kolaylaştıran, yol
-            açan, fikir veren gerçek bir tiyatro aşığı reji asistanım Doç. Dr.
-            Ayça Kartal çıktı sahneye... Ben hep imkânsız dedim kendisine... Çok
-            zor... Yapamayız, olmaz, başaramayız! Başarısız olacak bir işe neden
-            imza atmak ister ki insan? Başaracağız dedi Ayça Kartal tüm
-            inancıyla!
+            Pandemi süreciyle çok uzak kaldık sanattan ve sanatçıdan...{" "}
+            <U>Bir ışık yakmalıydık</U> tekrar sanata dair öğrencilerimizin ve
+            bizlerin yüreklerinde. Fakat nasıl? Ekip yok, alt yapı yok, dekor,
+            kostüm, aksesuar yok, her şeyden önce çalışmak için yeterli süre
+            yok!... Elimizde sadece <U>tecrübeler</U>... Birden her şeyi
+            kolaylaştıran, yol açan, fikir veren gerçek <U>bir tiyatro aşığı</U>{" "}
+            reji asistanım Doç. Dr. Ayça Kartal çıktı sahneye... Ben hep
+            imkânsız dedim kendisine... Çok zor... Yapamayız, olmaz,
+            başaramayız! Başarısız olacak bir işe neden imza atmak ister ki
+            insan? <U>Başaracağız</U> dedi Ayça Kartal tüm inancıyla!
           </p>
 
           <p>
             Eksikleri kapattık, bulduk buluşturduk, sahnede olmayı yürekten
-            isteyen, tüm gücüyle çalışan ve asla yorulmayan bir ekip kurduk.
-            Başladık metni didiklemeye... Provalar ilerlerken, ekibin özverili
-            çalışmalarıyla sahnelemek istediklerimin gerçek olduğunu görünce çok
-            duygulandım haliyle... Her geçen prova üzerine koyarak, birbirimize
-            olan güveni arttırdık. Bence şartlar dâhilinde sahnede var
-            olabileceğimiz en üst seviyeye geldik. Geldik ama, bireysel
-            performanslarla değil, gerçek bir ekip çalışmasıyla geldik.
+            isteyen, <U>tüm gücüyle çalışan</U> ve asla yorulmayan bir ekip
+            kurduk. Başladık metni didiklemeye... Provalar ilerlerken, ekibin
+            özverili çalışmalarıyla sahnelemek istediklerimin gerçek olduğunu
+            görünce <U>çok duygulandım</U> haliyle... Her geçen provanın üzerine
+            koyarak, birbirimize olan güveni arttırdık. Bence şartlar dâhilinde
+            sahnede var olabileceğimiz <U>en üst</U> seviyeye geldik. Geldik
+            ama, bireysel performanslarla değil, <U>gerçek bir ekip</U>{" "}
+            çalışmasıyla geldik.
           </p>
 
           <p>
@@ -202,8 +209,8 @@ const HomePage: NextPage = () => (
             Karadaş ve Abdulbaki Dursun{"'"}a, kostümlerimizi tasarlayan ve
             diken canım eşim Meryem Öcal{"'"}a ve akşam dersten çıkıp her gün
             provalara koşa koşa gelen fedakâr, sahne aşığı oyuncularımıza sonsuz
-            teşekkürlerimi sunuyorum... İyi ki varsınız... İyi ki hep
-            beraberiz...
+            teşekkürlerimi sunuyorum... <U>İyi ki varsınız...</U>{" "}
+            <U>İyi ki hep beraberiz...</U> 🎉
           </p>
         </div>
       </div>
@@ -282,6 +289,12 @@ const Layer: React.FC<{
       {children}
     </div>
   </div>
+);
+
+const U: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="border-b-[0.5px] hover:border-white/50 transition-colors border-white/30 ml-1">
+    {children}
+  </span>
 );
 
 export default HomePage;
