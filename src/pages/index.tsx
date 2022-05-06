@@ -120,7 +120,7 @@ const HomePage: NextPage = () => (
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
             {management.map((person, index) => (
-              <PeopleCard key={`manegement-${index}`} {...person} />
+              <PeopleCard key={`management-${index}`} {...person} />
             ))}
           </div>
         </div>
@@ -142,9 +142,23 @@ const HomePage: NextPage = () => (
         <Title>Oyunun Konusu</Title>
 
         <p className="text-2xl text-center text-white/50">
-          Aklı Başında Deliler... Aklı... Başında... Deliler... Aklı Başında...
-          Deliler! Aklı! Başında! DELİLER!! AKLI BAŞINDA DELİLER! Deli- deli...
-          Aklı başında...
+          Oyuncular “Aklı Başında Deliler Kumpanyası” oyununu sahnelemek ve
+          konuyla ilgili bilgi toplamak için ruh ve sinir hastalıkları
+          hastanesini ziyaret ederler. Amaçları başhekimi, ekibini ve hastaları
+          gözlemlemektir, fakat gittiklerinde başhekim ve ekibi yerlerinde
+          yoktur. Bunun üzerine oyuncular başhekimi, ekibini ve hastalarını
+          hayal ederler ve maceralarını sahneye taşırlar. Bir sonraki bölümde
+          yine oyuncuların hayallerindeki üniversite yıllarında, öğrencilerin
+          hocalarıyla yaşadıkları komik durumlar ele alınır. 2. perdenin ilk
+          epizodunda absürt tiyatro örneklerinden bir bölüm seyirciye sunulur.
+          Bir ameliyathanede, evlilik yıldönümünü unutan doktor, hemşire eşi,
+          anestezi uzmanı ve ameliyathaneyi basan doktorun annesi, bakalım
+          hastanın ameliyatını gerçekleştirebilecek mi? Final epizodunda kendi
+          rengimiz, özümüz ve özlemimiz Geleneksel Türk Tiyatrosu{"'"}nun
+          karakterleri Kavuklu ve Pişekar{"'"}ın maceralarını izleriz. Tuzsuz
+          Deli Bekir, Memiş, Dadı ve Psiko{"'"}da onlara eşlik eder. İki perde
+          komedi oyun, her sahnesiyle delice bir delileme vurgusuyla izleyenleri
+          kahkahaya davet ediyor.
         </p>
       </div>
     </Layer>
@@ -153,11 +167,45 @@ const HomePage: NextPage = () => (
       <div className="space-y-10 lg:w-2/4">
         <Title>Yönetmenin Görüşü</Title>
 
-        <p className="text-2xl text-center text-white/50">
-          Valla bence her şey çok güzel. Harika bir gösteri olacak. Görülmedik
-          bir şey olacak. Çok komik olacak. Güleceğiz. Canım öğrencilerimle
-          başaracağız bu oyunu. Zamanında çıkartacağız. Hazırlanıyoruz.
-        </p>
+        <div className="space-y-6 text-2xl text-center text-white/50">
+          <p>
+            Pandemi süreciyle çok uzak kaldık sanattan ve sanatçıdan... Bir ışık
+            yakmalıydık tekrar sanata dair öğrencilerimizin ve bizlerin
+            yüreklerinde. Fakat nasıl? Ekip yok, alt yapı yok, dekor, kostüm,
+            aksesuar yok, her şeyden önce çalışmak için yeterli süre yok!...
+            Elimizde sadece tecrübeler... Birden her şeyi kolaylaştıran, yol
+            açan, fikir veren gerçek bir tiyatro aşığı reji asistanım Doç. Dr.
+            Ayça Kartal çıktı sahneye... Ben hep imkânsız dedim kendisine... Çok
+            zor... Yapamayız, olmaz, başaramayız! Başarısız olacak bir işe neden
+            imza atmak ister ki insan? Başaracağız dedi Ayça Kartal tüm
+            inancıyla!
+          </p>
+
+          <p>
+            Eksikleri kapattık, bulduk buluşturduk, sahnede olmayı yürekten
+            isteyen, tüm gücüyle çalışan ve asla yorulmayan bir ekip kurduk.
+            Başladık metni didiklemeye... Provalar ilerlerken, ekibin özverili
+            çalışmalarıyla sahnelemek istediklerimin gerçek olduğunu görünce çok
+            duygulandım haliyle... Her geçen prova üzerine koyarak, birbirimize
+            olan güveni arttırdık. Bence şartlar dâhilinde sahnede var
+            olabileceğimiz en üst seviyeye geldik. Geldik ama, bireysel
+            performanslarla değil, gerçek bir ekip çalışmasıyla geldik.
+          </p>
+
+          <p>
+            Öncelikle reji asistanım, arkadaşım, dostum Doç. Dr. Ayça Kartal
+            {"'"}a, can hıraş sahnede koşturan sahne amirlerimiz Mehmet Rıfkı
+            Baba ve Adem Kaplan{"'"}a, oyunun canlı müziklerini hiç usanmadan
+            bizlerle çalışan ve koromuzu yöneten Öğr. Gör. Zeyneb Türkoğlu{"'"}
+            na, ekibe sonradan katılan, fakat sanki ekip kurulmadan önce ekipte
+            zaten olan ışık-ses ve teknik konularda kolumuz kanadımız Batuhan
+            Karadaş ve Abdulbaki Dursun{"'"}a, kostümlerimizi tasarlayan ve
+            diken canım eşim Meryem Öcal{"'"}a ve akşam dersten çıkıp her gün
+            provalara koşa koşa gelen fedakâr, sahne aşığı oyuncularımıza sonsuz
+            teşekkürlerimi sunuyorum... İyi ki varsınız... İyi ki hep
+            beraberiz...
+          </p>
+        </div>
       </div>
     </Layer>
 
@@ -166,12 +214,12 @@ const HomePage: NextPage = () => (
         <Title>Bağlantılar</Title>
 
         <div className="flex flex-wrap items-center justify-center gap-2">
-          <ShareItem
+          {/* <ShareItem
             icon={Instagram}
             title="Instagram Sayfamız"
             action="openOnWeb"
             value="https://instagram.com/aklibasindadeliler"
-          />
+          /> */}
 
           <ShareItem
             icon={Share}
@@ -182,14 +230,14 @@ const HomePage: NextPage = () => (
 
           <ShareItem
             icon={Mail}
-            title="Dr. Erdinç Öcal ﹣ E-Posta"
+            title="Yönetmen E-Posta"
             action="openMail"
             value="e.ocal@alparslan.edu.tr"
           />
 
           <ShareItem
             icon={Mail}
-            title="Doç. Dr. Ayça Kartal ﹣ E-Posta"
+            title="Reji Asst. E-Posta"
             action="openMail"
             value="a.kartal@alparslan.edu.tr"
           />
