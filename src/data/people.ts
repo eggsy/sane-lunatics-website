@@ -21,8 +21,12 @@ const people: IPeople[] = [
     people: ["Öğr. Gör. Zeyneb Türkoğlu"],
   },
   {
-    title: "Işık ve Ses",
+    title: "Işık, Ses & Teknik",
     people: ["Batuhan Karadaş", "Abdulbaki Dursun"],
+  },
+  {
+    title: "Kostüm Tasarım",
+    people: ["Meryem Öcal"],
   },
   {
     title: "Oyuncular",
@@ -93,6 +97,11 @@ export const management: IManegement[] = [
     name: "Abdulbaki Dursun",
     role: "Işık, Ses & Teknik",
     image: "/baki.jpg",
+  },
+  {
+    name: "Meryem Öcal",
+    role: "Kostüm Tasarım",
+    image: "/meryem.jpeg",
   },
 ];
 
