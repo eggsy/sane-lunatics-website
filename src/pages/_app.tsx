@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 // Tailwind CSS
 import "../styles/tailwind.css";
@@ -9,6 +10,7 @@ const meta = {
   description:
     "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
   image: "/header.jpg",
+  // googleMeasurementId: "",
 };
 
 const SaneLunaticsWebsite = ({ Component, pageProps }) => (
@@ -40,6 +42,27 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
     <div className="min-h-screen text-white bg-black font-amatic ">
       <Component {...pageProps} />
     </div>
+
+    {/* Google Analytics
+      TODO add analytics after buying the domain
+    */}
+    {/* <Script
+      src={
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        meta.googleMeasurementId
+      }
+      strategy="afterInteractive"
+    />
+
+    <Script id="google-analytics" strategy="afterInteractive">
+      {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${meta.googleMeasurementId}');
+        `}
+    </Script> */}
   </>
 );
 
