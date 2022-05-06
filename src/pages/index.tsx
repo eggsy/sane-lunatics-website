@@ -214,8 +214,8 @@ const HomePage: NextPage = () => (
           </p>
 
           <p>
-            Ve <U>işte başlıyor</U> Aklı Başında Deliler Kumpanyası...Işığınız
-            ve alkışınız bol olsun, perdeleriniz hiç kapanmasın.....{" "}
+            Ve <U>işte başlıyor</U> Aklı Başında Deliler Kumpanyası... Işığınız
+            ve alkışınız bol olsun, perdeleriniz hiç kapanmasın...
             <U>Sanatla kalın!</U>
           </p>
         </div>
