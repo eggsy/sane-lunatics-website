@@ -40,7 +40,7 @@ export const ShareItem: React.FC<{
   return (
     <button
       type="button"
-      className="flex items-center justify-center w-4/5 p-4 space-x-2 font-sans text-white transition-colors rounded-full cursor-pointer lg:hover:bg-white/20 group lg:text-white/50 bg-white/20 lg:hover:text-white lg:bg-white/10 lg:w-max"
+      className="flex items-center justify-center w-4/5 px-8 py-4 space-x-2 font-sans text-white transition-colors rounded-full cursor-pointer lg:hover:bg-white/20 group lg:text-white/50 bg-white/20 lg:hover:text-white lg:bg-white/10 lg:w-max"
       onClick={handleClick}
     >
       <Icon />
