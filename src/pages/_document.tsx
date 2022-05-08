@@ -7,8 +7,9 @@ class SaneLunaticsDocument extends Document {
     return (
       <Html lang="tr">
         <Head lang="tr">
-          <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+          <link rel="preload" href="/header.png" as="image"></link>
 
+          <link rel="preconnect" href="https://fonts.googleapis.com"></link>
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
