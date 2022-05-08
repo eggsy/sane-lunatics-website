@@ -41,7 +41,7 @@ export const AnimatedTexts: React.FC = () => (
         delay: 2,
       },
     }}
-    className="flex items-center justify-between space-x-16 text-2xl font-bold text-yellow-500"
+    className="flex items-center justify-between space-x-16 text-3xl font-bold text-yellow-500"
   >
     <span className="border-b border-white/25">2 Perde</span>
     <span className="border-b border-white/25">Komedi Oyunu</span>
