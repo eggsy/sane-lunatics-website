@@ -71,9 +71,11 @@ const HomePage: NextPage = () => (
           </div>
 
           <Link href="/galeri">
-            <a className="flex items-center justify-center space-x-1 text-2xl transition-colors lg:justify-end text-white/50 hover:text-white">
+            <a className="flex items-center justify-center space-x-1 text-3xl transition-colors lg:text-2xl lg:justify-end text-white/50 hover:text-white">
               <span>Daha Fazlasını Gör</span>
-              <ChevronRight />
+              <div className="hidden lg:block">
+                <ChevronRight />
+              </div>
             </a>
           </Link>
         </div>
