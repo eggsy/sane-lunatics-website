@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         amatic: ["Amatic SC", "cursive", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter", "cursive", ...defaultTheme.fontFamily.sans],
       },
     },
   },
