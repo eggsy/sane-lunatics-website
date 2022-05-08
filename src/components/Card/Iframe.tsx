@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 // Components
 import { Play } from "../Icons";
 
+// Functions
+import { getProxiedImageUrl } from "../../functions/getProxiedImageUrl";
+
 export const IframeCard: React.FC<{ poster: string; src: string }> = ({
   poster,
   src,
@@ -11,10 +14,16 @@ export const IframeCard: React.FC<{ poster: string; src: string }> = ({
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
       className="relative w-full bg-center bg-cover rounded-lg h-80"
       style={{
-        backgroundImage: !clicked ? `url('${poster}')` : "",
+        backgroundImage: !clicked ? `url('${getProxiedImageUrl(poster)}')` : "",
       }}
     >
       {!clicked && (
@@ -42,8 +51,8 @@ export const IframeCard: React.FC<{ poster: string; src: string }> = ({
         whileHover={{
           scale: 1.05,
         }}
-      ></motion.iframe>
-    </div>
+      />
+    </motion.div>
   );
 };
 
