@@ -7,6 +7,7 @@ import NProgress from "nprogress";
 
 // Import global CSS
 import "../styles/tailwind.css";
+import "../styles/globals.css";
 import "nprogress/nprogress.css";
 
 // Meta
