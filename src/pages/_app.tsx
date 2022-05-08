@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Script from "next/script";
+import Router from "next/router";
 
-// Tailwind CSS
+// Modules
+import NProgress from "nprogress";
+
+// Import global CSS
 import "../styles/tailwind.css";
+import "nprogress/nprogress.css";
 
 // Meta
 const meta = {
@@ -12,6 +17,16 @@ const meta = {
   image: "/header.jpg",
   googleMeasurementId: "G-27G9SFP45J",
 };
+
+// NProgress settings and events
+NProgress.configure({
+  showSpinner: true,
+  parent: "body",
+});
+
+Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done(true));
+Router.events.on("routeChangeError", () => NProgress.done(true));
 
 const SaneLunaticsWebsite = ({ Component, pageProps }) => (
   <>
