@@ -10,7 +10,7 @@ const meta = {
   description:
     "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler Kumpanyası', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
   image: "/header.jpg",
-  // googleMeasurementId: "",
+  googleMeasurementId: "G-27G9SFP45J",
 };
 
 const SaneLunaticsWebsite = ({ Component, pageProps }) => (
@@ -43,10 +43,8 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
       <Component {...pageProps} />
     </div>
 
-    {/* Google Analytics
-      TODO add analytics after buying the domain
-    */}
-    {/* <Script
+    {/* Google Analytics */}
+    <Script
       src={
         "https://www.googletagmanager.com/gtag/js?id=" +
         meta.googleMeasurementId
@@ -62,7 +60,7 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
 
           gtag('config', '${meta.googleMeasurementId}');
         `}
-    </Script> */}
+    </Script>
   </>
 );
 
