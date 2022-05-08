@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^17.0.31
+  '@types/nprogress': ^0.2.0
   '@types/react': ^18.0.8
   autoprefixer: ^10.4.7
   eslint: 8.14.0
@@ -24,6 +25,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 17.0.31
+  '@types/nprogress': 0.2.0
   '@types/react': 18.0.8
   autoprefixer: 10.4.7_postcss@8.4.13
   eslint: 8.14.0
@@ -243,6 +245,10 @@ packages:
 
   /@types/node/17.0.31:
     resolution: {integrity: sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==}
+    dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
     dev: true
 
   /@types/prop-types/15.7.5:
