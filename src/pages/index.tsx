@@ -104,27 +104,28 @@ const HomePage: NextPage = () => (
       <div className="space-y-6 text-center lg:space-y-10">
         <span className="text-2xl font-bold text-yellow-500">yer ve zaman</span>
 
-        <div className="flex items-center text-8xl">
-          {"25 Mayıs 2022".split("").map((item, index) => (
-            <div
-              key={`date-${item}-${index}`}
-              className="animate-bounce"
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
-            >
-              {item}
-            </div>
-          ))}
+        <div className="flex flex-wrap items-center justify-center text-6xl font-bold lg:text-8xl">
+          <motion.h3
+            animate={{
+              scale: 1.1,
+              transition: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                repeatDelay: 1,
+              },
+            }}
+          >
+            25 Mayıs 2022
+          </motion.h3>
         </div>
 
-        <div className="flex flex-col font-bold leading-tight">
-          <span className="text-3xl leading-tight lg:text-2xl">
+        <div className="flex flex-col leading-tight text-yellow-500">
+          <span className="text-2xl leading-tight lg:text-3xl">
             1071 Malazgirt Kongre ve Kültür Merkezi
           </span>
 
-          <span className="text-xl leading-tight lg:text-base">
-            Muş Alparslan Üniversitesi − Ana Salon
+          <span className="text-xl leading-tight lg:text-2xl">
+            Muş Alparslan Üniversitesi − {'"A"'} Salonu
           </span>
         </div>
       </div>
