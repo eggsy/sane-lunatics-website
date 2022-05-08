@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 // Types
 import type { NextPage } from "next";
 
 // Components
+import { AnimatedTexts, AnimatedTitle } from "../components/AnimatedText";
+import { PreviewCard } from "../components/Card/Preview";
+import { PeopleCard } from "../components/Card/People";
+import { ShareItem } from "../components/ShareItem";
+import { Title } from "../components/Title";
 import {
   ChevronRight,
   /* Instagram, */
@@ -12,10 +18,6 @@ import {
   Share,
   Theater,
 } from "../components/Icons";
-import { PreviewCard } from "../components/Card/Preview";
-import { PeopleCard } from "../components/Card/People";
-import { Title } from "../components/Title";
-import { ShareItem } from "../components/ShareItem";
 
 // Data
 import people, { management } from "../data/people";
@@ -29,16 +31,32 @@ const WEBSITE_URL = "https://delilerkumpanyasi.com";
 
 const HomePage: NextPage = () => (
   <main className="space-y-36">
-    <Layer background="/header.jpg">
-      <div className="absolute inset-x-0 top-0 px-4 py-2 text-center text-yellow-500 bg-black/90">
-        <h3 className="text-4xl font-black lg:text-6xl">
-          Aklı Başında Deliler Kumpanyası
-        </h3>
-      </div>
+    <Layer>
+      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-6">
+        <AnimatedTitle />
 
-      <div className="absolute flex items-center justify-between mx-auto space-x-16 text-2xl font-bold text-yellow-500 inset-x-6 lg:w-1/2 bottom-8">
-        <span className="border-b border-white/25">2 Perde</span>
-        <span className="border-b border-white/25">Bir Komedi Oyunu</span>
+        <motion.div
+          initial={{
+            scale: 0,
+            opacity: 0,
+          }}
+          animate={{
+            scale: 1,
+            opacity: 1,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+          className="mt-16 bg-center bg-cover lg:w-1/2"
+          style={{
+            backgroundImage: "url('/test.png')",
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/test.png" alt="people" className="invisible" />
+        </motion.div>
+
+        <AnimatedTexts />
       </div>
     </Layer>
 
