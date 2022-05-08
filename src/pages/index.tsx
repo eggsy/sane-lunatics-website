@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 // Types
 import type { NextPage } from "next";
 
 // Components
 import {
+  ChevronRight,
   /* Instagram, */
   Location,
   Mail,
@@ -57,10 +60,22 @@ const HomePage: NextPage = () => (
       <div className="w-full lg:w-2/3 space-y-14">
         <Title>Kumpanyadan Kareler</Title>
 
-        <div className="grid w-full gap-6 lg:grid-cols-3">
-          {createArray(6).map((_, index) => (
-            <PreviewCard key={`preview-${index}`} image={`/${index + 1}.jpg`} />
-          ))}
+        <div className="space-y-4">
+          <div className="grid w-full gap-6 lg:grid-cols-3">
+            {createArray(6).map((_, index) => (
+              <PreviewCard
+                key={`preview-${index}`}
+                image={`/${index + 1}.jpg`}
+              />
+            ))}
+          </div>
+
+          <Link href="/galeri">
+            <a className="flex items-center justify-center space-x-1 text-2xl transition-colors lg:justify-end text-white/50 hover:text-white">
+              <span>Daha Fazlasını Gör</span>
+              <ChevronRight />
+            </a>
+          </Link>
         </div>
       </div>
     </Layer>
