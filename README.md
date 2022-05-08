@@ -1,18 +1,14 @@
-# Sane Lunatics Website
+# 🎭 Sane Lunatics Website
 
 <p align="center">
   <img src="./banner.png" />
 </p>
 
-> 🇹🇷 Turkish website
-
-Website that is built for the theater play "**Aklı Başında Deliler Kumpanyası**" that will play on stage in **Mus Alparslan University** on May 25th.
-
-I've been working on it since I joined their team as Lighting, Sound and Technical Manager and I wanted to make it OSS now.
+Website that is built for the theater play "**Aklı Başında Deliler Kumpanyası**" that will play on stage in 🇹🇷 **Mus Alparslan University** (and soon going on other universities/cities) starting from May 25.
 
 ### ✨ Live Demo
 
-This website auto deploys from [Netlify](https://netlify.app) and is available on [delilerkumpanyasi.com](https://delilerkumpanyasi.com).
+This website auto-deploys on [Netlify](https://netlify.app) and is available on [delilerkumpanyasi.com](https://delilerkumpanyasi.com).
 
 ### License
 
