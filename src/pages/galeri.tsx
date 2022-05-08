@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 // Types
@@ -8,13 +8,28 @@ import type { NextPage } from "next";
 // Components
 import { IframeCard } from "../components/Card/Iframe";
 
+// Functions
+import { getProxiedImageUrl } from "../functions/getProxiedImageUrl";
+
 // Data
 import { gallery } from "../data/gallery";
 
 const GalleryPage: NextPage = () => {
-  const [category, setCategory] = useState<"images" | "videos">("images");
-  const { images, videos } = gallery;
+  const [category, setCategory] = useState<"images" | "videos" | "posters">(
+    "images"
+  );
 
+  const baseButtonClasses =
+    "px-6 py-4 font-bold uppercase transition-colors hover:bg-yellow-500";
+
+  // Memo
+  const getColsAmount = useMemo(() => {
+    if (category === "images" || category === "videos")
+      return "lg:grid-cols-4 ";
+    else if (category === "posters") return "lg:grid-cols-4";
+  }, [category]);
+
+  // Static
   const staggeredContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -52,11 +67,12 @@ const GalleryPage: NextPage = () => {
         <div className="flex flex-col items-center justify-between gap-4 lg:flex-row font-inter">
           <h1 className="font-black text-yellow-500 text-8xl">Galeri</h1>
 
-          <div className="flex items-center text-sm rounded-full cursor-pointer select-none ring-1 ring-yellow-500">
+          <div className="flex flex-wrap items-center text-sm rounded-full cursor-pointer select-none ring-1 ring-yellow-500">
             <button
               type="button"
-              className={`px-6 py-4 font-bold uppercase transition-colors rounded-l-full hover:bg-yellow-500
-              ${category === "images" ? "bg-yellow-500" : ""}`}
+              className={`${baseButtonClasses} rounded-l-full ${
+                category === "images" ? "bg-yellow-500" : ""
+              }`}
               onClick={() => setCategory("images")}
             >
               Resimler
@@ -64,8 +80,19 @@ const GalleryPage: NextPage = () => {
 
             <button
               type="button"
-              className={`px-6 py-4 font-bold uppercase transition-colors rounded-r-full hover:bg-yellow-500
-              ${category === "videos" ? "bg-yellow-500" : ""}`}
+              className={`${baseButtonClasses} ${
+                category === "posters" ? "bg-yellow-500" : ""
+              }`}
+              onClick={() => setCategory("posters")}
+            >
+              Afişler
+            </button>
+
+            <button
+              type="button"
+              className={`${baseButtonClasses} rounded-r-full ${
+                category === "videos" ? "bg-yellow-500" : ""
+              }`}
               onClick={() => setCategory("videos")}
             >
               Videolar
@@ -75,38 +102,62 @@ const GalleryPage: NextPage = () => {
       </header>
 
       <motion.div
-        className="grid gap-4 md:grid-cols-2 lg:grid-cols-4"
+        className={`grid gap-4 md:grid-cols-2 ${getColsAmount}`}
         variants={staggeredContainer}
         initial="hidden"
         animate="show"
       >
-        {category === "images"
-          ? images.map((item, index) => (
-              <motion.div
-                key={`gallery-page-${index}`}
-                className="w-full bg-center bg-cover rounded-lg h-52"
-                style={{
-                  backgroundImage: `url('${item}')`,
-                }}
-                variants={{
-                  hidden: { opacity: 0 },
-                  show: { opacity: 1 },
-                }}
-                whileHover={{
-                  scale: 1.05,
-                }}
-              />
-            ))
-          : videos.map((video, index) => (
-              <IframeCard
-                key={`gallery-page-video-${index}`}
-                src={`https://player.vimeo.com/video/${video.videoId}`}
-                poster={video.poster}
-              />
-            ))}
+        {PageView(category)}
       </motion.div>
     </main>
   );
+};
+
+const PageView = (category: "images" | "videos" | "posters") => {
+  const { images, posters, videos } = gallery;
+
+  if (category === "images")
+    return images.map((item, index) => (
+      <motion.div
+        key={`gallery-image-item-${index}`}
+        className="w-full bg-center bg-cover rounded-lg h-52"
+        style={{
+          backgroundImage: `url('${getProxiedImageUrl(item)}')`,
+        }}
+        variants={{
+          hidden: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        whileHover={{
+          scale: 1.05,
+        }}
+      />
+    ));
+  else if (category === "posters")
+    return posters.map((item, index) => (
+      <motion.div
+        key={`gallery-poster-item-${index}`}
+        className="w-full bg-center bg-cover rounded-lg h-[65vh]"
+        style={{
+          backgroundImage: `url('${getProxiedImageUrl(item)}')`,
+        }}
+        variants={{
+          hidden: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        whileHover={{
+          scale: 1.05,
+        }}
+      />
+    ));
+
+  return videos.map((video, index) => (
+    <IframeCard
+      key={`gallery-iframe-item-${index}`}
+      src={`https://player.vimeo.com/video/${video.videoId}`}
+      poster={video.poster}
+    />
+  ));
 };
 
 export default GalleryPage;
