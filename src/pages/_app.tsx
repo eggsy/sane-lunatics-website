@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import Router from "next/router";
 
 // Modules
@@ -15,8 +14,7 @@ const meta = {
   title: "Aklı Başında Deliler Kumpanyası ﹣ 25 Mayıs'ta Sahnede!",
   description:
     "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler Kumpanyası', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
-  image: "/header.jpg",
-  googleMeasurementId: "G-27G9SFP45J",
+  image: "/people.jpg",
 };
 
 // NProgress settings and events
@@ -58,25 +56,6 @@ const SaneLunaticsWebsite = ({ Component, pageProps }) => (
     <div className="min-h-screen text-white bg-black font-amatic ">
       <Component {...pageProps} />
     </div>
-
-    {/* Google Analytics */}
-    <Script
-      src={
-        "https://www.googletagmanager.com/gtag/js?id=" +
-        meta.googleMeasurementId
-      }
-      strategy="afterInteractive"
-    />
-
-    <Script id="google-analytics" strategy="afterInteractive">
-      {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${meta.googleMeasurementId}');
-        `}
-    </Script>
   </>
 );
 
