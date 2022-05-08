@@ -26,13 +26,13 @@ const GalleryPage: NextPage = () => {
   };
 
   return (
-    <main className="container py-16 mx-auto space-y-8 text-2xl">
+    <main className="container px-6 py-16 mx-auto space-y-8 text-2xl lg:px-0">
       <header>
         <Link href="/">
-          <a className="flex items-center space-x-2 transition-colors w-max text-white/50 hover:text-white">
+          <a className="flex items-center justify-center space-x-2 transition-colors lg:w-max lg:justify-start text-white/50 hover:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
+              className="hidden w-5 h-5 lg:block"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -49,7 +49,7 @@ const GalleryPage: NextPage = () => {
           </a>
         </Link>
 
-        <div className="flex items-center justify-between font-inter">
+        <div className="flex flex-col items-center justify-between gap-4 lg:flex-row font-inter">
           <h1 className="font-black text-yellow-500 text-8xl">Galeri</h1>
 
           <div className="flex items-center text-sm rounded-full cursor-pointer select-none ring-1 ring-yellow-500">

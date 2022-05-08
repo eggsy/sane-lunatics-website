@@ -34,6 +34,10 @@ const videos: VideoItem[] = [
     poster: "https://i.imgur.com/Jx9A6fd.jpg",
     videoId: "707503958",
   },
+  {
+    poster: "https://i.imgur.com/DKtwEbh.jpg",
+    videoId: "707516501",
+  },
 ];
 
 export const gallery: GalleryItems = {
