@@ -49,11 +49,11 @@ const HomePage: NextPage = () => (
           }}
           className="mt-16 bg-center bg-cover lg:w-1/2"
           style={{
-            backgroundImage: "url('/test.png')",
+            backgroundImage: "url('/header.png')",
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/test.png" alt="people" className="invisible" />
+          <img src="/header.png" alt="people" className="invisible" />
         </motion.div>
 
         <AnimatedTexts />
