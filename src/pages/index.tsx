@@ -21,6 +21,7 @@ import {
 
 // Data
 import { people, management } from "../data/people";
+import { previewImages, peopleImages } from "../data/images";
 
 // Functions
 import createArray from "../functions/createArray";
@@ -80,11 +81,8 @@ const HomePage: NextPage = () => (
 
         <div className="space-y-4">
           <div className="grid w-full gap-6 lg:grid-cols-3">
-            {createArray(6).map((_, index) => (
-              <PreviewCard
-                key={`preview-${index}`}
-                image={`/${index + 1}.jpg`}
-              />
+            {previewImages.map((image, index) => (
+              <PreviewCard key={`preview-${index}`} image={image} />
             ))}
           </div>
 
@@ -171,8 +169,8 @@ const HomePage: NextPage = () => (
           </h3>
 
           <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
-            {createArray(PEOPLE_AMOUNT).map((_, index) => (
-              <PeopleCard key={`people-${index}`} image={`/${index + 1}.jpg`} />
+            {peopleImages.map((image, index) => (
+              <PeopleCard key={`people-${index}`} image={image} />
             ))}
           </div>
         </div>

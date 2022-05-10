@@ -66,41 +66,41 @@ export const management: IManegement[] = [
   {
     name: "Erdinç Öcal",
     role: "Yazan & Yöneten",
-    image: "/erdinc.jpg",
+    image: "https://i.imgur.com/wb0l1ue.jpg",
   },
   {
     name: "Ayça Kartal",
     role: "Reji Asistanı",
-    image: "/ayca.jpg",
+    image: "https://i.imgur.com/aaygP4j.jpg",
   },
   {
     name: "Mehmet Rıfkı Baba",
     role: "Sahne Amiri",
-    image: "/mehmet.jpg",
+    image: "https://i.imgur.com/6KtRKhY.jpg",
   },
   {
     name: "Adem Kaplan",
     role: "Sahne Amiri",
-    image: "/adem.jpg",
+    image: "https://i.imgur.com/3edteG9.jpg",
   },
   {
     name: "Zeyneb Türkoğlu",
     role: "Müzik Yönetmeni",
-    image: "/zeyneb.jpeg",
+    image: "https://i.imgur.com/poAWtfl.jpg",
   },
   {
     name: "Batuhan Karadaş",
     role: "Işık, Ses & Teknik",
-    image: "/batu.jpeg",
+    image: "https://i.imgur.com/5kSo4oJ.jpg",
   },
   {
     name: "Abdulbaki Dursun",
     role: "Işık, Ses & Teknik",
-    image: "/baki.jpg",
+    image: "https://i.imgur.com/dvRl2m1.jpg",
   },
   {
     name: "Meryem Öcal",
     role: "Kostüm Tasarım",
-    image: "/meryem.jpeg",
+    image: "https://i.imgur.com/C53m30n.jpg",
   },
 ];

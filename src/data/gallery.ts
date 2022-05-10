@@ -10,12 +10,12 @@ interface GalleryItems {
 }
 
 const images = [
-  "/previews/1.jpg",
-  "/previews/2.jpg",
-  "/previews/3.jpg",
-  "/previews/4.jpg",
-  "/previews/5.jpg",
-  "/previews/6.jpg",
+  "https://i.imgur.com/Li07W77.jpg",
+  "https://i.imgur.com/h03xZ0z.jpg",
+  "https://i.imgur.com/Mc7wrPr.jpg",
+  "https://i.imgur.com/FfP7SGG.jpg",
+  "https://i.imgur.com/qxlEfPz.jpg",
+  "https://i.imgur.com/n2LjSBS.jpg",
   "https://i.imgur.com/RylvfA4.jpg",
   "https://i.imgur.com/t8zOLDW.jpg",
   "https://i.imgur.com/qACtImr.jpg",

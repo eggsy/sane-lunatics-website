@@ -7,7 +7,7 @@ export const PeopleCard: React.FC<{
 }> = ({ image, name, role }) => {
   const PersonImage = (
     <Image
-      src={`/people${image}`}
+      src={image}
       height="200px"
       width="100"
       objectFit="cover"
