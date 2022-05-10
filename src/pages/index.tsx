@@ -305,7 +305,7 @@ const HomePage: NextPage = () => (
         lang="en"
       >
         <span>a website by:</span>
-        <span>Abdulbaki {"'EGGSY'"} Dursun</span>
+        <span lang="tr">Abdulbaki {"'EGGSY'"} Dursun</span>
       </a>
     </Layer>
   </main>
