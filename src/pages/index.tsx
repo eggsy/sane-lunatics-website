@@ -156,7 +156,6 @@ const HomePage: NextPage = () => (
             {management.map((person, index) => (
               <PeopleCard key={`management-${index}`} {...person} />
             ))}
-            x
           </div>
         </div>
 
