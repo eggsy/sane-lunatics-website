@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+// Functions
+import getProxiedImageUrl from "../../functions/getProxiedImageUrl";
+
 export const PeopleCard: React.FC<{
   image: string;
   name?: string;
@@ -7,7 +10,7 @@ export const PeopleCard: React.FC<{
 }> = ({ image, name, role }) => {
   const PersonImage = (
     <Image
-      src={image}
+      src={getProxiedImageUrl(image)}
       height="200px"
       width="100"
       objectFit="cover"
