@@ -3,7 +3,7 @@ interface IPeople {
   people: string[];
 }
 
-const people: IPeople[] = [
+export const people: IPeople[] = [
   {
     title: "Yazan & Yöneten",
     people: ["Dr. Öğr. Üyesi Erdinç Öcal"],
@@ -104,5 +104,3 @@ export const management: IManegement[] = [
     image: "/meryem.jpeg",
   },
 ];
-
-export default people;

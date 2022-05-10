@@ -20,7 +20,7 @@ import {
 } from "../components/Icons";
 
 // Data
-import people, { management } from "../data/people";
+import { people, management } from "../data/people";
 
 // Functions
 import createArray from "../functions/createArray";
