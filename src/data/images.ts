@@ -1,7 +1,3 @@
-import { getProxiedImageUrl } from "../functions/getProxiedImageUrl";
-
-const ProxifyImage = getProxiedImageUrl;
-
 export const previewImages = [
   "https://i.imgur.com/Li07W77.jpg",
   "https://i.imgur.com/h03xZ0z.jpg",
@@ -9,7 +5,7 @@ export const previewImages = [
   "https://i.imgur.com/FfP7SGG.jpg",
   "https://i.imgur.com/qxlEfPz.jpg",
   "https://i.imgur.com/n2LjSBS.jpg",
-].map(ProxifyImage);
+];
 
 export const peopleImages = [
   "https://i.imgur.com/VNciQ0Q.jpg",
@@ -33,4 +29,4 @@ export const peopleImages = [
   "https://i.imgur.com/8GyXB3Y.jpg",
   "https://i.imgur.com/mSunhFy.jpg",
   "https://i.imgur.com/W393X6G.jpg",
-].map(ProxifyImage);
+];
