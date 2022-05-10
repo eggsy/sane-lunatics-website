@@ -136,7 +136,7 @@ const PageView = (category: "images" | "videos" | "posters") => {
           show: { opacity: 1 },
         }}
         whileHover={{
-          scale: 1.05,
+          scale: 1.025,
         }}
       />
     ));
@@ -153,7 +153,7 @@ const PageView = (category: "images" | "videos" | "posters") => {
           show: { opacity: 1 },
         }}
         whileHover={{
-          scale: 1.05,
+          scale: 1.025,
         }}
       />
     ));

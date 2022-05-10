@@ -16,7 +16,7 @@ export const PeopleCard: React.FC<{
       alt="person image"
       className="object-cover w-full h-56 rounded-xl"
       whileHover={{
-        scale: 1.05,
+        scale: 1.025,
       }}
     />
   );
