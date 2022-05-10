@@ -1,11 +1,17 @@
+import { motion } from "framer-motion";
+
+// Functions
 import { getProxiedImageUrl } from "../../functions/getProxiedImageUrl";
 
 export const PreviewCard: React.FC<{
   image: string;
 }> = ({ image }) => (
-  <div
-    className="w-full h-56 transition-all bg-center bg-cover rounded-lg lg:hover:scale-105"
+  <motion.div
+    className="w-full h-56 bg-center bg-cover rounded-lg"
     style={{ backgroundImage: `url('${getProxiedImageUrl(image)}')` }}
+    whileHover={{
+      scale: 1.025,
+    }}
   />
 );
 export default PreviewCard;
