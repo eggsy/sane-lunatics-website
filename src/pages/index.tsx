@@ -23,11 +23,7 @@ import {
 import { people, management } from "../data/people";
 import { previewImages, peopleImages } from "../data/images";
 
-// Functions
-import createArray from "../functions/createArray";
-
 // Static data
-const PEOPLE_AMOUNT = 21;
 const WEBSITE_URL = "https://delilerkumpanyasi.com";
 
 const HomePage: NextPage = () => (
@@ -160,6 +156,7 @@ const HomePage: NextPage = () => (
             {management.map((person, index) => (
               <PeopleCard key={`management-${index}`} {...person} />
             ))}
+            x
           </div>
         </div>
 
