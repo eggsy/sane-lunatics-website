@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
@@ -41,75 +42,81 @@ const GalleryPage: NextPage = () => {
   };
 
   return (
-    <main className="container px-6 py-16 mx-auto space-y-8 text-2xl lg:px-0">
-      <header>
-        <Link href="/">
-          <a className="flex items-center justify-center space-x-2 transition-colors lg:w-max lg:justify-start text-white/50 hover:text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="hidden w-5 h-5 lg:block"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+    <>
+      <Head>
+        <title>Galeri - Aklı Başında Deliler Kumpanyası</title>
+      </Head>
 
-            <span>Ana Sayfaya Dön</span>
-          </a>
-        </Link>
+      <main className="container px-6 py-16 mx-auto space-y-8 text-2xl lg:px-0">
+        <header>
+          <Link href="/">
+            <a className="flex items-center justify-center space-x-2 transition-colors lg:w-max lg:justify-start text-white/50 hover:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="hidden w-5 h-5 lg:block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
 
-        <div className="flex flex-col items-center justify-between gap-4 lg:flex-row font-inter">
-          <h1 className="font-black text-yellow-500 text-8xl">Galeri</h1>
+              <span>Ana Sayfaya Dön</span>
+            </a>
+          </Link>
 
-          <div className="flex flex-wrap items-center text-sm rounded-full cursor-pointer select-none ring-1 ring-yellow-500">
-            <button
-              type="button"
-              className={`${baseButtonClasses} rounded-l-full ${
-                category === "images" ? "bg-yellow-500" : ""
-              }`}
-              onClick={() => setCategory("images")}
-            >
-              Resimler
-            </button>
+          <div className="flex flex-col items-center justify-between gap-4 lg:flex-row font-inter">
+            <h1 className="font-black text-yellow-500 text-8xl">Galeri</h1>
 
-            <button
-              type="button"
-              className={`${baseButtonClasses} ${
-                category === "posters" ? "bg-yellow-500" : ""
-              }`}
-              onClick={() => setCategory("posters")}
-            >
-              Afişler
-            </button>
+            <div className="flex flex-wrap items-center text-sm rounded-full cursor-pointer select-none ring-1 ring-yellow-500">
+              <button
+                type="button"
+                className={`${baseButtonClasses} rounded-l-full ${
+                  category === "images" ? "bg-yellow-500" : ""
+                }`}
+                onClick={() => setCategory("images")}
+              >
+                Resimler
+              </button>
 
-            <button
-              type="button"
-              className={`${baseButtonClasses} rounded-r-full ${
-                category === "videos" ? "bg-yellow-500" : ""
-              }`}
-              onClick={() => setCategory("videos")}
-            >
-              Videolar
-            </button>
+              <button
+                type="button"
+                className={`${baseButtonClasses} ${
+                  category === "posters" ? "bg-yellow-500" : ""
+                }`}
+                onClick={() => setCategory("posters")}
+              >
+                Afişler
+              </button>
+
+              <button
+                type="button"
+                className={`${baseButtonClasses} rounded-r-full ${
+                  category === "videos" ? "bg-yellow-500" : ""
+                }`}
+                onClick={() => setCategory("videos")}
+              >
+                Videolar
+              </button>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <motion.div
-        className={`grid gap-4 md:grid-cols-2 ${getColsAmount}`}
-        variants={staggeredContainer}
-        initial="hidden"
-        animate="show"
-      >
-        {PageView(category)}
-      </motion.div>
-    </main>
+        <motion.div
+          className={`grid gap-4 md:grid-cols-2 ${getColsAmount}`}
+          variants={staggeredContainer}
+          initial="hidden"
+          animate="show"
+        >
+          {PageView(category)}
+        </motion.div>
+      </main>
+    </>
   );
 };
 
