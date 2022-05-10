@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Functions
 import getProxiedImageUrl from "../../functions/getProxiedImageUrl";
@@ -9,13 +9,15 @@ export const PeopleCard: React.FC<{
   role?: string;
 }> = ({ image, name, role }) => {
   const PersonImage = (
-    <Image
+    // eslint-disable-next-line @next/next/no-img-element
+    <motion.img
       src={getProxiedImageUrl(image)}
-      height="200px"
-      width="100"
-      objectFit="cover"
+      loading="lazy"
       alt="person image"
-      className="transition-all transform rounded-xl lg:hover:scale-105"
+      className="object-cover w-full h-56 rounded-xl"
+      whileHover={{
+        scale: 1.05,
+      }}
     />
   );
 
