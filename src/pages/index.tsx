@@ -126,12 +126,15 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className=" space-y-14 lg:w-1/3">
+      <div className="space-y-14 lg:w-2/3">
         <Title>Ekip</Title>
 
-        <div className="space-y-8">
+        <div className="grid gap-8 lg:grid-cols-2">
           {people.map((category, index) => (
-            <div key={`category-${index}`} className="space-y-2">
+            <div
+              key={`category-${index}`}
+              className={`space-y-2 ${!people[index + 1] ? "col-span-2" : ""}`}
+            >
               <h3 className="text-3xl font-semibold text-yellow-500 border-b w-max border-white/20">
                 {category.title}
               </h3>
@@ -174,7 +177,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="space-y-10 lg:w-2/4">
+      <div className="space-y-10 lg:w-2/3">
         <Title>Oyunun Konusu</Title>
 
         <p className="text-2xl font-semibold text-justify">
@@ -200,7 +203,7 @@ const HomePage: NextPage = () => (
     </Layer>
 
     <Layer>
-      <div className="space-y-10 lg:w-2/4">
+      <div className="space-y-10 lg:w-2/3">
         <Title>Yönetmenin Görüşü</Title>
 
         <div className="space-y-6 text-2xl font-semibold text-justify">
