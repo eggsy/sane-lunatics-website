@@ -24,9 +24,9 @@ const images = [
 
 const posters = [
   "https://i.imgur.com/NgnY5Bz.jpg",
-  "https://i.imgur.com/T3PnICA.png",
-  "https://i.imgur.com/xamhcW9.png",
-  "https://i.imgur.com/n6e6ToT.png",
+  "https://i.imgur.com/kdz7u0D.png",
+  "https://i.imgur.com/goJJR5x.png",
+  "https://i.imgur.com/v5qoTPU.png",
 ];
 
 const videos: VideoItem[] = [
