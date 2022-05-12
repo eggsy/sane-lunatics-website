@@ -38,6 +38,7 @@ export const people: IPeople[] = [
       "Arş. Gör. Gülşah Kuru",
       "Azra Demircan",
       "Eda Çiçek",
+      "Muhammet Ali Ürey",
       "Mehmet Rıfkı Baba",
       "Adem Kaplan",
       "Dilan Çelik",
