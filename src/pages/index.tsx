@@ -47,7 +47,7 @@ const HomePage: NextPage = () => (
           className="mt-16 bg-center bg-cover lg:w-1/2"
           style={{
             backgroundImage: "url('/header.png')",
-            boxShadow: "0px -70px 50px 0px black inset",
+            boxShadow: "0px -70px 40px 0px black inset",
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
