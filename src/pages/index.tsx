@@ -29,7 +29,7 @@ const WEBSITE_URL = "https://delilerkumpanyasi.com";
 const HomePage: NextPage = () => (
   <main className="space-y-36">
     <Layer>
-      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-6">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center space-y-6">
         <AnimatedTitle />
 
         <motion.div
@@ -47,10 +47,16 @@ const HomePage: NextPage = () => (
           className="mt-16 bg-center bg-cover lg:w-1/2"
           style={{
             backgroundImage: "url('/header.png')",
+            boxShadow: "0px -70px 60px 0px black inset",
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/header.png" alt="people" className="invisible" />
+          <img
+            src="/header.png"
+            alt="people"
+            className="invisible"
+            draggable={false}
+          />
         </motion.div>
 
         <AnimatedTexts />
@@ -83,7 +89,7 @@ const HomePage: NextPage = () => (
           </div>
 
           <Link href="/galeri">
-            <a className="flex items-center justify-center space-x-1 text-3xl transition-colors lg:text-2xl lg:justify-end text-white/50 hover:text-white">
+            <a className="flex items-center justify-center py-2 pl-8 pr-6 space-x-1 text-3xl transition-colors rounded-full hover:bg-white/10 bg-white/5 lg:ml-auto lg:w-max lg:text-2xl lg:justify-end text-white/50 hover:text-white">
               <span>Daha Fazlasını Gör</span>
               <div className="hidden lg:block">
                 <ChevronRight />
