@@ -10,16 +10,17 @@ interface GalleryItems {
 }
 
 const images = [
+  "https://i.imgur.com/RylvfA4.jpg",
+  "https://i.imgur.com/t8zOLDW.jpg",
+  "https://i.imgur.com/qACtImr.jpg",
+  "https://i.imgur.com/Gp0Sq2i.jpg",
   "https://i.imgur.com/Li07W77.jpg",
   "https://i.imgur.com/h03xZ0z.jpg",
   "https://i.imgur.com/Mc7wrPr.jpg",
   "https://i.imgur.com/FfP7SGG.jpg",
   "https://i.imgur.com/qxlEfPz.jpg",
   "https://i.imgur.com/n2LjSBS.jpg",
-  "https://i.imgur.com/RylvfA4.jpg",
-  "https://i.imgur.com/t8zOLDW.jpg",
-  "https://i.imgur.com/qACtImr.jpg",
-  "https://i.imgur.com/Gp0Sq2i.jpg",
+  "https://i.imgur.com/DSmYjqx.jpg",
 ];
 
 const posters = [
