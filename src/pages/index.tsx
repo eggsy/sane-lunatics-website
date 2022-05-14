@@ -139,7 +139,9 @@ const HomePage: NextPage = () => (
           {people.map((category, index) => (
             <div
               key={`category-${index}`}
-              className={`space-y-2 ${!people[index + 1] ? "col-span-2" : ""}`}
+              className={`space-y-2 ${
+                !people[index + 1] ? "lg:col-span-2" : ""
+              }`}
             >
               <h3 className="text-3xl font-semibold text-yellow-500 border-b w-max border-white/20">
                 {category.title}
