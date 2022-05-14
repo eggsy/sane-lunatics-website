@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
 
 // Functions
 import getProxiedImageUrl from "../../functions/getProxiedImageUrl";
@@ -8,16 +9,32 @@ export const PeopleCard: React.FC<{
   name?: string;
   role?: string;
 }> = ({ image, name, role }) => {
+  const [imageError, setError] = useState(false);
+
+  const getImageUrl = useMemo(() => {
+    if (imageError === true)
+      return {
+        type: "fallback",
+        url: "/person-no-image.svg",
+      };
+
+    return {
+      type: "original",
+      url: getProxiedImageUrl(image),
+    };
+  }, [image, imageError]);
+
   const PersonImage = (
     // eslint-disable-next-line @next/next/no-img-element
     <motion.img
-      src={getProxiedImageUrl(image)}
+      src={getImageUrl.url}
       loading="lazy"
       alt="person image"
       className="object-cover w-full h-56 rounded-xl"
       whileHover={{
         scale: 1.025,
       }}
+      onError={() => setError(true)}
     />
   );
 
