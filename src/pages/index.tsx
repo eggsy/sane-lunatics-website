@@ -11,6 +11,7 @@ import { PeopleCard } from "../components/Card/People";
 import { ShareItem } from "../components/ShareItem";
 import { Title } from "../components/Title";
 import {
+  Calendar,
   ChevronRight,
   /* Instagram, */
   Location,
@@ -127,6 +128,15 @@ const HomePage: NextPage = () => (
           <span className="text-xl leading-tight lg:text-2xl">
             Muş Alparslan Üniversitesi − {'"A"'} Salonu
           </span>
+        </div>
+
+        <div className="flex justify-center">
+          <ShareItem
+            icon={Calendar}
+            title="Takvime Ekle"
+            action="openOnWeb"
+            value="/event.ics"
+          />
         </div>
       </div>
     </Layer>
