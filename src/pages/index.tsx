@@ -115,7 +115,7 @@ const HomePage: NextPage = () => (
               },
             }}
           >
-            25 Mayıs 2022
+            25 Mayıs 22 - 19:00
           </motion.h3>
         </div>
 
