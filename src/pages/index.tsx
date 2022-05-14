@@ -203,8 +203,8 @@ const HomePage: NextPage = () => (
           annesi ile bakalım <U>hastanın ameliyatını gerçekleştirebilecek mi</U>
           ? Final epizodunda kendi rengimiz, özümüz ve özlemimiz Geleneksel Türk
           Tiyatrosu{"'"}nun karakterleri <U>Kavuklu ve Pişekar{"'"}</U>
-          ın maceralarını izleriz. Tuzsuz Deli Bekir, Memiş, Dadı ve Psiko{"'"}
-          da onlara eşlik eder. İki perde komedi oyun, her sahnesiyle delice bir
+          ın maceralarını izleriz. Tuzsuz Deli Bekir, Memiş, Dadı ve Psiko da
+          onlara eşlik eder. İki perde komedi oyun, her sahnesiyle delice bir
           delileme vurgusuyla izleyenleri <U>kahkahaya davet ediyor</U>.
         </p>
       </div>
