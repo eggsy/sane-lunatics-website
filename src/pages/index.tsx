@@ -90,7 +90,7 @@ const HomePage: NextPage = () => (
           </div>
 
           <Link href="/galeri">
-            <a className="flex items-center justify-center py-2 pl-8 pr-6 space-x-1 text-3xl transition-colors rounded-full hover:bg-white/10 bg-white/5 lg:ml-auto lg:w-max lg:text-2xl lg:justify-end text-white/50 hover:text-white">
+            <a className="flex items-center justify-center px-8 py-4 ml-auto space-x-2 font-sans font-light transition-colors rounded-full cursor-pointer text-white/50 lg:hover:bg-white/10 group lg:text-white/50 bg-white/10 lg:hover:text-white lg:bg-white/5 lg:w-max">
               <span>Daha Fazlasını Gör</span>
               <div className="hidden lg:block">
                 <ChevronRight />
