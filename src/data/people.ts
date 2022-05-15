@@ -87,7 +87,7 @@ export const management: IManegement[] = [
   {
     name: "Zeyneb Türkoğlu",
     role: "Müzik Yönetmeni",
-    image: "https://i.imgur.com/oBxhOhd.jpg",
+    image: "https://i.imgur.com/IJOO2I1.jpg",
   },
   {
     name: "Batuhan Karadaş",
