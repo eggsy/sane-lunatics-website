@@ -13,7 +13,7 @@ import { Title } from "../components/Title";
 import {
   Calendar,
   ChevronRight,
-  /* Instagram, */
+  Instagram,
   Location,
   Mail,
   Share,
@@ -278,12 +278,12 @@ const HomePage: NextPage = () => (
         <Title>Bağlantılar</Title>
 
         <div className="flex flex-wrap items-center justify-center gap-2">
-          {/* <ShareItem
+          <ShareItem
             icon={Instagram}
             title="Instagram Sayfamız"
             action="openOnWeb"
-            value="https://instagram.com/aklibasindadeliler"
-          /> */}
+            value="https://instagram.com/delilerkumpanyasi"
+          />
 
           <ShareItem
             icon={Share}
