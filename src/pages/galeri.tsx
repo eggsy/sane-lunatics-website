@@ -47,7 +47,7 @@ const GalleryPage: NextPage = () => {
         <title>Galeri - Aklı Başında Deliler Kumpanyası</title>
       </Head>
 
-      <main className="container px-6 py-16 mx-auto space-y-8 text-2xl lg:px-0">
+      <main className="container px-6 py-16 mx-auto space-y-8 text-2xl md:px-4 lg:px-0">
         <header>
           <Link href="/">
             <a className="flex items-center justify-center space-x-2 transition-colors lg:w-max lg:justify-start text-white/50 hover:text-white">
