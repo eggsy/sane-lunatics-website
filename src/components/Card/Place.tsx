@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+// Functions
 import { getProxiedImageUrl } from "../../functions/getProxiedImageUrl";
 
 export const PlaceCard: React.FC<{
@@ -7,8 +10,11 @@ export const PlaceCard: React.FC<{
   background: string;
   image: string;
 }> = ({ place, section, date, background, image }) => (
-  <div
-    className="p-8 space-y-4 rounded-xl"
+  <motion.div
+    whileHover={{
+      scale: 1.05,
+    }}
+    className="p-8 space-y-4 cursor-default rounded-xl"
     style={{ backgroundColor: background }}
   >
     <div className="flex flex-col items-center gap-4 lg:flex-row">
@@ -33,7 +39,7 @@ export const PlaceCard: React.FC<{
     <div className="flex items-center justify-center gap-2 leading-tight lg:justify-start">
       <span className="text-sm uppercase">{section}</span>
     </div>
-  </div>
+  </motion.div>
 );
 
 export default PlaceCard;
