@@ -9,6 +9,7 @@ import type { NextPage } from "next";
 import { AnimatedTexts, AnimatedTitle } from "../components/AnimatedText";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
+import { PlaceCard } from "../components/Card/Place";
 import { ShareItem } from "../components/ShareItem";
 import { Title } from "../components/Title";
 import { Modal } from "../components/Modal";
@@ -24,6 +25,7 @@ import {
 
 // Data
 import { people, management } from "../data/people";
+import { places } from "../data/places";
 import { previewImages, peopleImages } from "../data/images";
 
 // Static data
@@ -152,43 +154,13 @@ const HomePage: NextPage = () => {
         </Layer>
 
         <Layer>
-          <div className="space-y-6 text-center lg:space-y-10">
-            <span className="text-2xl font-bold text-yellow-500">
-              yer ve zaman
-            </span>
+          <div className="space-y-6 text-center lg:w-1/3 lg:space-y-10">
+            <Title>Yer & Zaman</Title>
 
-            <div className="flex flex-wrap items-center justify-center text-6xl font-bold lg:text-8xl">
-              <motion.h3
-                animate={{
-                  scale: 1.1,
-                  transition: {
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    repeatDelay: 1,
-                  },
-                }}
-              >
-                25 Mayıs 22 - 19:00
-              </motion.h3>
-            </div>
-
-            <div className="flex flex-col leading-tight text-yellow-500">
-              <span className="text-2xl leading-tight lg:text-3xl">
-                1071 Malazgirt Kongre ve Kültür Merkezi
-              </span>
-
-              <span className="text-xl leading-tight lg:text-2xl">
-                Muş Alparslan Üniversitesi − {'"A"'} Salonu
-              </span>
-            </div>
-
-            <div className="flex justify-center">
-              <ShareItem
-                icon={Calendar}
-                title="Takvime Ekle"
-                action="openOnWeb"
-                value="/event.ics"
-              />
+            <div className="grid gap-6 lg:text-left font-inter">
+              {places.map((place, index) => (
+                <PlaceCard key={`place-card-${index}`} {...place} />
+              ))}
             </div>
           </div>
         </Layer>
