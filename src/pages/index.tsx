@@ -154,10 +154,10 @@ const HomePage: NextPage = () => {
         </Layer>
 
         <Layer>
-          <div className="space-y-6 text-center lg:w-1/3 lg:space-y-10">
+          <div className="space-y-6 text-center lg:w-2/3 lg:space-y-10">
             <Title>Yer & Zaman</Title>
 
-            <div className="grid gap-6 lg:text-left font-inter">
+            <div className="grid gap-6 lg:grid-cols-2 lg:text-left font-inter">
               {places.map((place, index) => (
                 <PlaceCard key={`place-card-${index}`} {...place} />
               ))}
