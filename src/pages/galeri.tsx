@@ -127,7 +127,7 @@ const PageView = (category: "images" | "videos" | "posters") => {
     return images.map((item, index) => (
       <motion.div
         key={`gallery-image-item-${index}`}
-        className="w-full bg-center bg-cover rounded-lg h-52"
+        className="w-full bg-center bg-cover rounded-lg bg-white/10 h-52"
         style={{
           backgroundImage: `url('${getProxiedImageUrl(item)}')`,
         }}
@@ -144,7 +144,7 @@ const PageView = (category: "images" | "videos" | "posters") => {
     return posters.map((item, index) => (
       <motion.div
         key={`gallery-poster-item-${index}`}
-        className="w-full bg-center bg-cover rounded-lg h-[65vh]"
+        className="w-full bg-center bg-cover bg-white/10 rounded-lg h-[65vh]"
         style={{
           backgroundImage: `url('${getProxiedImageUrl(item)}')`,
         }}

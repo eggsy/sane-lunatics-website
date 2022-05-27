@@ -7,7 +7,7 @@ export const PreviewCard: React.FC<{
   image: string;
 }> = ({ image }) => (
   <motion.div
-    className="w-full h-56 bg-center bg-cover rounded-lg"
+    className="w-full h-56 bg-center bg-cover rounded-lg bg-white/10"
     style={{ backgroundImage: `url('${getProxiedImageUrl(image)}')` }}
     whileHover={{
       scale: 1.025,

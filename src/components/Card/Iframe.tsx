@@ -21,7 +21,7 @@ export const IframeCard: React.FC<{ poster: string; src: string }> = ({
       animate={{
         opacity: 1,
       }}
-      className="relative w-full bg-center bg-cover rounded-lg h-80"
+      className="relative w-full bg-center bg-cover rounded-lg bg-white/10 h-80"
       style={{
         backgroundImage: !clicked ? `url('${getProxiedImageUrl(poster)}')` : "",
       }}
