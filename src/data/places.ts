@@ -4,6 +4,7 @@ interface IPlaces {
   date: string;
   image: string;
   background: string;
+  expired?: boolean;
 }
 
 export const places: IPlaces[] = [
@@ -13,6 +14,7 @@ export const places: IPlaces[] = [
     date: "25 Mayıs 22 - 19:00",
     image: "https://i.imgur.com/PJWb5Fx.png",
     background: "#E31E24",
+    expired: true,
   },
   {
     place: "Bitlis Eren Üniversitesi",
@@ -20,5 +22,6 @@ export const places: IPlaces[] = [
     date: "26 Mayıs 22 - 18:00",
     image: "https://i.imgur.com/IMQjSSQ.png",
     background: "#16B1CE",
+    expired: true,
   },
 ];
