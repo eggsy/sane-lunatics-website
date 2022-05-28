@@ -1,6 +1,6 @@
 interface IPlaces {
   place: string;
-  section: string;
+  section?: string;
   date: string;
   image: string;
   background: string;
@@ -23,5 +23,12 @@ export const places: IPlaces[] = [
     image: "https://i.imgur.com/IMQjSSQ.png",
     background: "#16B1CE",
     expired: true,
+  },
+  {
+    place: "Muş Kültür Merkezi",
+    section: "Biletler: AY-KA Kırtasiye & Hayalperest Cafe",
+    date: "11 Haziran 22 - 19.30",
+    image: "https://i.imgur.com/iBP80q2.png",
+    background: "#0EA5E9",
   },
 ];
