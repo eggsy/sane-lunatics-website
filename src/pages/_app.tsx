@@ -12,9 +12,9 @@ import "nprogress/nprogress.css";
 
 // Meta
 const meta = {
-  title: "Aklı Başında Deliler Kumpanyası ﹣ 25 Mayıs'ta Sahnede!",
+  title: "Aklı Başında Deliler Kumpanyası",
   description:
-    "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler Kumpanyası', 25 Mayıs'ta Muş Alparslan Üniversitesi 1071 Malazgirt Kongre ve Kültür Merkezi'nde sahne alacak! Detaylı bilgi için tıklayın.",
+    "Erdinç Öcal'ın yazıp yönettiği 'Aklı Başında Deliler Kumpanyası' tiyatro oyunu, Muş Alparslan Üniversitesi öğretim üyeleri ve öğrencileriyle düzenlenmiş 2 perdelik bir komedi oyunudur! Detaylı bilgi için tıklayın.",
   image: "/people.jpg",
 };
 
