@@ -1,4 +1,4 @@
-interface IPlaces {
+export interface IPlaces {
   place: string;
   section?: string;
   date: string;

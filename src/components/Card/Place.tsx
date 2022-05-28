@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 
+// Types
+import type { IPlaces } from "../../data/places";
+
 // Functions
 import { getProxiedImageUrl } from "../../functions/getProxiedImageUrl";
 
-export const PlaceCard: React.FC<{
-  place: string;
-  section: string;
-  date: string;
-  background: string;
-  image: string;
-  expired?: boolean;
-}> = ({ place, section, date, background, image, expired = false }) => (
+export const PlaceCard: React.FC<IPlaces> = ({
+  place,
+  section,
+  date,
+  background,
+  image,
+  expired = false,
+}) => (
   <motion.div
     whileHover={{
       scale: 1.05,
@@ -43,9 +46,11 @@ export const PlaceCard: React.FC<{
       </div>
     </div>
 
-    <div className="flex items-center justify-center gap-2 leading-tight lg:justify-start">
-      <span className="text-sm uppercase">{section}</span>
-    </div>
+    {section && (
+      <div className="flex items-center justify-center gap-2 leading-tight lg:justify-start">
+        <span className="text-sm uppercase">{section}</span>
+      </div>
+    )}
   </motion.div>
 );
 
