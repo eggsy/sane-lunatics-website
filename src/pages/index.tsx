@@ -339,7 +339,7 @@ const HomePage: NextPage = () => {
                 icon={Location}
                 title="Konumu Haritada Göster"
                 action="openOnWeb"
-                value="https://goo.gl/maps/vTVkqNH2T2KBAHuk9"
+                value="https://goo.gl/maps/MwNnGsWpbarY6fJ86"
               />
             </div>
           </div>
