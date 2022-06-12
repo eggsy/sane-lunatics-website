@@ -30,5 +30,6 @@ export const places: IPlaces[] = [
     date: "11 Haziran 22 - 19.30",
     image: "https://i.imgur.com/iBP80q2.png",
     background: "#0EA5E9",
+    expired: true,
   },
 ];
