@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const MODAL_ID = "instagram-campaign";
-
 export const Modal: React.FC<{
+  id: string;
   title?: string;
   icon?: React.FC;
   children: React.ReactNode;
@@ -24,7 +23,7 @@ export const Modal: React.FC<{
     const modals = getModals();
 
     if (clickCloseButton === true)
-      localStorage.setItem("modals", JSON.stringify([...modals, MODAL_ID]));
+      localStorage.setItem("modals", JSON.stringify([...modals, props.id]));
 
     setModal(false);
   };
@@ -32,8 +31,8 @@ export const Modal: React.FC<{
   // Lifecycle
   useEffect(() => {
     const modals = getModals();
-    if (!modals.includes(MODAL_ID)) setModal(true);
-  }, [setModal]);
+    if (!modals.includes(props.id)) setModal(true);
+  }, [props.id, setModal]);
 
   if (!showModal) return null;
   return (

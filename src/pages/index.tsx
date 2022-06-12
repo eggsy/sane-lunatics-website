@@ -31,7 +31,7 @@ const WEBSITE_URL = "https://delilerkumpanyasi.com";
 
 const HomePage: NextPage = () => (
   <>
-    <Modal icon={Instagram} title="Instagram Sayfamız Açıldı!">
+    <Modal id="instagram-campaign" icon={Instagram} title="Instagram Sayfamız Açıldı!">
       Provalarımızı, sahne çalışmalarımızı ve duyurularımızın tümünü
       paylaşacağımız Instagram hesabımız hizmete geçmiştir.{" "}
       <a
