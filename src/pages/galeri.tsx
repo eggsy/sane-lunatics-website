@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Head from "next/head";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // Types
 import type { NextPage } from "next";
+type CategoryOptions = "images" | "videos" | "posters";
 
 // Components
 import { IframeCard } from "../components/Card/Iframe";
@@ -16,14 +18,24 @@ import { getProxiedImageUrl } from "../functions/getProxiedImageUrl";
 import { gallery } from "../data/gallery";
 
 const GalleryPage: NextPage = () => {
-  const [category, setCategory] = useState<"images" | "videos" | "posters">(
-    "images"
-  );
+  const [category, setCategory] = useState<CategoryOptions>("images");
+  const router = useRouter();
 
+  const setCategoryHashAndState = (cat: CategoryOptions) => {
+    router.push({ hash: cat });
+    setCategory(cat);
+  };
+
+  // Lifecycle
+  useEffect(() => {
+    const hash = router?.asPath?.split("#")?.[1] as CategoryOptions;
+    if (hash) setCategory(hash);
+  }, [router.asPath]);
+
+  // Static
   const baseButtonClasses =
     "px-4 py-2 lg:px-6 lg:py-4 font-bold uppercase transition-colors hover:bg-yellow-500";
 
-  // Static
   const staggeredContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -72,7 +84,7 @@ const GalleryPage: NextPage = () => {
                 className={`${baseButtonClasses} rounded-l-full ${
                   category === "images" ? "bg-yellow-500" : ""
                 }`}
-                onClick={() => setCategory("images")}
+                onClick={() => setCategoryHashAndState("images")}
               >
                 Resimler
               </button>
@@ -82,7 +94,7 @@ const GalleryPage: NextPage = () => {
                 className={`${baseButtonClasses} ${
                   category === "posters" ? "bg-yellow-500" : ""
                 }`}
-                onClick={() => setCategory("posters")}
+                onClick={() => setCategoryHashAndState("posters")}
               >
                 Afişler
               </button>
@@ -92,7 +104,7 @@ const GalleryPage: NextPage = () => {
                 className={`${baseButtonClasses} rounded-r-full ${
                   category === "videos" ? "bg-yellow-500" : ""
                 }`}
-                onClick={() => setCategory("videos")}
+                onClick={() => setCategoryHashAndState("videos")}
               >
                 Videolar
               </button>
