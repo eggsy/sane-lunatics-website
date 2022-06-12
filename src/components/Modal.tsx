@@ -1,17 +1,44 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+
+const MODAL_ID = "instagram-campaign";
 
 export const Modal: React.FC<{
   title?: string;
   icon?: React.FC;
-  show: boolean;
-  onClose: (clickCloseButton?: boolean) => void;
   children: React.ReactNode;
 }> = (props) => {
-  if (!props.show) return null;
+  const [showModal, setModal] = useState(false);
+
+  // Functions
+  const getModals = () => {
+    if (!localStorage) return;
+
+    const modals = localStorage.getItem("modals");
+    const parsedModals: string[] = modals ? JSON.parse(modals) : [];
+
+    return parsedModals;
+  };
+
+  const closeModal = (clickCloseButton: boolean = false) => {
+    const modals = getModals();
+
+    if (clickCloseButton === true)
+      localStorage.setItem("modals", JSON.stringify([...modals, MODAL_ID]));
+
+    setModal(false);
+  };
+
+  // Lifecycle
+  useEffect(() => {
+    const modals = getModals();
+    if (!modals.includes(MODAL_ID)) setModal(true);
+  }, [setModal]);
+
+  if (!showModal) return null;
   return (
     <div
-      onClick={() => props.onClose()}
+      onClick={() => closeModal()}
       className="fixed inset-0 z-50 flex items-center justify-center text-black bg-black/50 font-inter"
     >
       <motion.div
@@ -35,7 +62,7 @@ export const Modal: React.FC<{
 
         <button
           type="button"
-          onClick={() => props.onClose(true)}
+          onClick={() => closeModal(true)}
           className="px-4 py-2 text-sm uppercase transition-colors bg-black/5 rounded-xl hover:bg-black/10"
         >
           Kapat
