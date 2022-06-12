@@ -4,7 +4,7 @@ type StaggeredConfig = {
   [k in "container" | "item"]?: Variants;
 };
 
-export const AnimatedTitle: React.FC = () => {
+const Title: React.FC = () => {
   const staggered: StaggeredConfig = {
     container: {
       hidden: { opacity: 0 },
@@ -38,7 +38,7 @@ export const AnimatedTitle: React.FC = () => {
   );
 };
 
-export const AnimatedTexts: React.FC = () => {
+const Text: React.FC = () => {
   const staggered: StaggeredConfig = {
     container: {
       hidden: { scale: 0, opacity: 0 },
@@ -65,3 +65,10 @@ export const AnimatedTexts: React.FC = () => {
     </motion.div>
   );
 };
+
+const Animated = {
+  Title,
+  Text,
+};
+
+export default Animated;

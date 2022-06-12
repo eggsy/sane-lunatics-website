@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import type { NextPage } from "next";
 
 // Components
-import { AnimatedTexts, AnimatedTitle } from "../components/AnimatedText";
 import { PreviewCard } from "../components/Card/Preview";
 import { PeopleCard } from "../components/Card/People";
 import { PlaceCard } from "../components/Card/Place";
 import { ShareItem } from "../components/ShareItem";
 import { Title } from "../components/Title";
 import { Modal } from "../components/Modal";
+import Animated from "../components/AnimatedText";
 import {
   ChevronRight,
   Instagram,
@@ -51,7 +51,7 @@ const HomePage: NextPage = () => (
     <main className="space-y-36">
       <Layer>
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center space-y-6">
-          <AnimatedTitle />
+          <Animated.Title />
 
           <motion.div
             initial={{
@@ -80,7 +80,7 @@ const HomePage: NextPage = () => (
             />
           </motion.div>
 
-          <AnimatedTexts />
+          <Animated.Text />
         </div>
       </Layer>
 
@@ -158,7 +158,7 @@ const HomePage: NextPage = () => (
 
       <Layer id="kadro">
         <div className="w-full space-y-20 lg:w-2/3">
-          <Title>Kadromuz</Title>
+          <Title>Kadro</Title>
 
           <div className="space-y-4">
             <h3 className="text-4xl font-bold text-yellow-500 border-b border-white/10">
