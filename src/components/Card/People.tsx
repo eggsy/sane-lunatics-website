@@ -12,22 +12,13 @@ export const PeopleCard: React.FC<{
   const [imageError, setError] = useState(false);
 
   const getImageUrl = useMemo(() => {
-    if (imageError === true)
-      return {
-        type: "fallback",
-        url: "/person-no-image.svg",
-      };
-
-    return {
-      type: "original",
-      url: getProxiedImageUrl(image),
-    };
+    if (imageError === true) return "/person-no-image.svg";
+    return getProxiedImageUrl(image);
   }, [image, imageError]);
 
   const PersonImage = (
-    // eslint-disable-next-line @next/next/no-img-element
     <motion.img
-      src={getImageUrl.url}
+      src={getImageUrl}
       loading="lazy"
       alt="person image"
       className="object-cover w-full h-56 rounded-xl"
