@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 // Types
@@ -22,13 +22,6 @@ const GalleryPage: NextPage = () => {
 
   const baseButtonClasses =
     "px-4 py-2 lg:px-6 lg:py-4 font-bold uppercase transition-colors hover:bg-yellow-500";
-
-  // Memo
-  const getColsAmount = useMemo(() => {
-    if (category === "images" || category === "videos")
-      return "lg:grid-cols-4 ";
-    else if (category === "posters") return "lg:grid-cols-4";
-  }, [category]);
 
   // Static
   const staggeredContainer = {
@@ -108,7 +101,7 @@ const GalleryPage: NextPage = () => {
         </header>
 
         <motion.div
-          className={`grid gap-4 md:grid-cols-2 ${getColsAmount}`}
+          className="grid gap-4 md:grid-cols-2 lg:grid-cols-4"
           variants={staggeredContainer}
           initial="hidden"
           animate="show"
